@@ -1,7 +1,7 @@
 window.addEventListener('load', () => { //登録する関数オブジェクト記述開始
   const mapElement = {
     // 日野キャンパス2号館をの緯度経度を中心にして表示する
-    center: {lat:35.661707+35.654540+35.660719+35.662657+35.661930, lng:139.406823+139.397083+139.400892+139.388994+139.366485},
+    center: {lat:(35.661707+35.654540+35.660719+35.662657+35.661930)/5, lng:(139.406823+139.397083+139.400892+139.388994+139.366485)/5},
     zoom: 16
   };
 
@@ -88,7 +88,7 @@ window.addEventListener('load', () => { //登録する関数オブジェクト�
   window.infoWindowArray.push(firstInfoWindow);
 
   // 2つめのマーカオブジェクトの作成
-  const secondcontentTitle='<a href=#jizou>熊野神社</a>';
+  const secondcontentTitle='<a href=#kumano>熊野神社</a>';
   const secondcontentsecondTitle='<p>養蚕が盛んだった村の姿が浮かばれる小さな祠が祀られている神社</p>';
   const secondcontentImg='<img src="img/Kumano.jpg">';
   const contentsecondHTML=secondcontentTitle+secondcontentsecondTitle+secondcontentImg;
