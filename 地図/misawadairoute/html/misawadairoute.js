@@ -31,8 +31,6 @@ window.addEventListener('load', () => {
     // もちろん複数作ることもできる．
     const kmlLayer = new google.maps.KmlLayer(kmlLayerElements);
 
-
-
   // 日野キャンパス1号館にマーカを表示するためのパラメータオブジェクト
   const firstMarkerElement = {
 
@@ -162,6 +160,30 @@ window.addEventListener('load', () => {
     map: myMap
   };
 
+  const　twenty_secondMarkerElement = {
+    title: '観光地１',
+    position: {lat:35.650680, lng:139.442858},
+    map: myMap
+  };
+
+  const　twenty_thirdMarkerElement = {
+    title: '観光地２',
+    position: {lat:35.662021, lng:139.412141},
+    map: myMap
+  };
+
+  const　twenty_fourthMarkerElement = {
+    title: '観光地３',
+    position: {lat:35.650391, lng:139.447989},
+    map: myMap
+  };
+
+  const　twenty_fifthMarkerElement = {
+    title: '観光地４',
+    position: {lat:35.653331, lng:139.436061},
+    map: myMap
+  };
+
   /*const　twenty_secondMarkerElement = {
     title: '観光地１',
     position: {lat:35.647830, lng:139.429384},
@@ -215,6 +237,14 @@ window.addEventListener('load', () => {
     new google.maps.Marker(twentiethMarkerElement);
   const twenty_firstMarker =
     new google.maps.Marker(twenty_firstMarkerElement);
+  const twenty_secondMarker =
+    new google.maps.Marker(twenty_secondMarkerElement);
+  const twenty_thirdMarker =
+    new google.maps.Marker(twenty_thirdMarkerElement);
+  const twenty_fourthMarker =
+    new google.maps.Marker(twenty_fourthMarkerElement);
+  const twenty_fifthMarker =
+    new google.maps.Marker(twenty_fifthMarkerElement);
 
   // 情報ウィンドウを二つ作成
   const firstInfoWindowElement =
@@ -343,6 +373,29 @@ window.addEventListener('load', () => {
   // 同様に配列に追加する
   window.infoWindowArray.push(twenty_firstInfoWindow)
 
+  const twenty_secondInfoWindowElement =
+    {content: '<p><font size="4">イノウエベーカリー</font><br><font size="2">並んでも食べたい！本格パン屋</font></p><img src="../images/inouebakery.jpg" height= "100" >'};
+  const twenty_secondInfoWindow = new google.maps.InfoWindow(twenty_secondInfoWindowElement);
+  // 同様に配列に追加する
+  window.infoWindowArray.push(twenty_secondInfoWindow)
+
+  const twenty_thirdInfoWindowElement =
+    {content: '<p><font size="4">Cafe De Dango</font><br><font size="2">地球を味わうカフェ</font></p><img src="../images/cafededango.jpg" height= "100" >'};
+  const twenty_thirdInfoWindow = new google.maps.InfoWindow(twenty_thirdInfoWindowElement);
+  // 同様に配列に追加する
+  window.infoWindowArray.push(twenty_thirdInfoWindow)
+
+  const twenty_fourthInfoWindowElement =
+    {content: '<p><font size="4">ぱくぱく くもくま堂</font><br><font size="2">思わず写真を撮りたくなるかき氷</font></p><img src="../images/pakupakukumokumadou.jpg" height= "100" >'};
+  const twenty_fourthInfoWindow = new google.maps.InfoWindow(twenty_fourthInfoWindowElement);
+  // 同様に配列に追加する
+  window.infoWindowArray.push(twenty_fourthInfoWindow)
+
+  const twenty_fifthInfoWindowElement =
+    {content: '<p><font size="4">ARTIGIANO GELATERIA</font><br><font size="2">地元素材を使ったイタリアンジェラート</font></p><img src="../images/artigianogelateria.jpg" height= "100" >'};
+  const twenty_fifthInfoWindow = new google.maps.InfoWindow(twenty_fifthInfoWindowElement);
+  // 同様に配列に追加する
+  window.infoWindowArray.push(twenty_fifthInfoWindow)
 
 
   firstMarker.addListener('click', ()=> { //関数オブジェクトを記述開始
@@ -495,6 +548,34 @@ window.addEventListener('load', () => {
       val.close();
     });
     twenty_firstInfoWindow.open(myMap, twenty_firstMarker);
+  });
+
+  twenty_secondMarker.addListener('click', ()=>{
+    window.infoWindowArray.forEach((val, index, array) => {
+      val.close();
+    });
+    twenty_secondInfoWindow.open(myMap, twenty_secondMarker);
+  });
+
+  twenty_thirdMarker.addListener('click', ()=>{
+    window.infoWindowArray.forEach((val, index, array) => {
+      val.close();
+    });
+    twenty_thirdInfoWindow.open(myMap, twenty_thirdMarker);
+  });
+
+  twenty_fourthMarker.addListener('click', ()=>{
+    window.infoWindowArray.forEach((val, index, array) => {
+      val.close();
+    });
+    twenty_fourthInfoWindow.open(myMap, twenty_fourthMarker);
+  });
+
+  twenty_fifthMarker.addListener('click', ()=>{
+    window.infoWindowArray.forEach((val, index, array) => {
+      val.close();
+    });
+    twenty_fifthInfoWindow.open(myMap, twenty_fifthMarker);
   });
 
 }); // window.addEventListenerに登録する関数オブジェクトここまで

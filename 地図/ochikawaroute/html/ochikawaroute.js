@@ -126,6 +126,30 @@ window.addEventListener('load', () => {
     map: myMap
   };
 
+  const　sixteenthMarkerElement = {
+    title: '観光地１',
+    position: {lat:35.653821, lng:139.427498},
+    map: myMap
+  };
+
+  const　seventeenthMarkerElement = {
+    title: '観光地２',
+    position: {lat:35.662462, lng:139.425292},
+    map: myMap
+  };
+
+  const　eighteenthMarkerElement = {
+    title: '観光地３',
+    position: {lat:35.651459, lng:139.437263},
+    map: myMap
+  };
+
+  const　nineteenthMarkerElement = {
+    title: '観光地４',
+    position: {lat:35.661658, lng:139.425155},
+    map: myMap
+  };
+
   //情報ウィンドウオブジェクトを格納する配列を，グローバルに作っておく
   //要素数ゼロの配列を作る
   window.infoWindowArray = new Array();
@@ -161,6 +185,15 @@ window.addEventListener('load', () => {
     new google.maps.Marker(fourteenthMarkerElement);
   const fifteenthMarker =
     new google.maps.Marker(fifteenthMarkerElement);
+  const sixteenthMarker =
+    new google.maps.Marker(sixteenthMarkerElement);
+  const seventeenthMarker =
+    new google.maps.Marker(seventeenthMarkerElement);
+  const eighteenthMarker =
+    new google.maps.Marker(eighteenthMarkerElement);
+  const nineteenthMarker =
+    new google.maps.Marker(nineteenthMarkerElement);
+
 
   // 情報ウィンドウを二つ作成
   const firstInfoWindowElement =
@@ -252,6 +285,30 @@ window.addEventListener('load', () => {
   const fifteenthInfoWindow = new google.maps.InfoWindow(fifteenthInfoWindowElement);
   // 同様に配列に追加する
   window.infoWindowArray.push(fifteenthInfoWindow)
+
+  const sixteenthInfoWindowElement =
+    {content: '<p><font size="4">京王百草園</font><br><font size="2">四季折々の草花に癒される日本庭園</font></p><img src="../images/mogusaenn.png" height= "120" >'};
+  const sixteenthInfoWindow = new google.maps.InfoWindow(sixteenthInfoWindowElement);
+  // 同様に配列に追加する
+  window.infoWindowArray.push(sixteenthInfoWindow)
+
+  const seventeenthInfoWindowElement =
+    {content: '<p><font size="4">土方農園</font><br><font size="2">都内で気軽にブルーベリー狩りを楽しもう</font></p><img src="../images/hijikatanouenn.jpg" height= "120" ><br><p>※イメージ画像</p>'};
+  const seventeenthInfoWindow = new google.maps.InfoWindow(seventeenthInfoWindowElement);
+  // 同様に配列に追加する
+  window.infoWindowArray.push(seventeenthInfoWindow)
+
+  const eighteenthInfoWindowElement =
+    {content: '<p><font size="4">株式会社　温市</font><br><font size="2">温りのある食卓と畑の架け橋<br>日野の小さな市場</font></p><img src="../images/nukumoriichi.jpg" height= "120" >'};
+  const eighteenthInfoWindow = new google.maps.InfoWindow(eighteenthInfoWindowElement);
+  // 同様に配列に追加する
+  window.infoWindowArray.push(eighteenthInfoWindow)
+
+  const nineteenthInfoWindowElement =
+    {content: '<p><font size="4">とことこ</font><br><font size="2">散歩しながら「とことこ」と<br>寄りたくなるお店</font></p><img src="../images/tokotoko.jpg" height= "100" >'};
+  const nineteenthInfoWindow = new google.maps.InfoWindow(nineteenthInfoWindowElement);
+  // 同様に配列に追加する
+  window.infoWindowArray.push(nineteenthInfoWindow)
 
 
   firstMarker.addListener('click', ()=> { //関数オブジェクトを記述開始
@@ -362,6 +419,34 @@ window.addEventListener('load', () => {
       val.close();
     });
     fifteenthInfoWindow.open(myMap, fifteenthMarker);
+  });
+
+  sixteenthMarker.addListener('click', ()=>{
+    window.infoWindowArray.forEach((val, index, array) => {
+      val.close();
+    });
+    sixteenthInfoWindow.open(myMap, sixteenthMarker);
+  });
+
+  seventeenthMarker.addListener('click', ()=>{
+    window.infoWindowArray.forEach((val, index, array) => {
+      val.close();
+    });
+    seventeenthInfoWindow.open(myMap, seventeenthMarker);
+  });
+
+  eighteenthMarker.addListener('click', ()=>{
+    window.infoWindowArray.forEach((val, index, array) => {
+      val.close();
+    });
+  eighteenthInfoWindow.open(myMap, eighteenthMarker);
+  });
+
+  nineteenthMarker.addListener('click', ()=>{
+    window.infoWindowArray.forEach((val, index, array) => {
+      val.close();
+    });
+  nineteenthInfoWindow.open(myMap, nineteenthMarker);
   });
 
 }); // window.addEventListenerに登録する関数オブジェクトここまで
