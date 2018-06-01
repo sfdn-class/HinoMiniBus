@@ -34,6 +34,41 @@ window.addEventListener('load', () => { //登録する関数オブジェクト�
     // もちろん複数作ることもできる．
     const kmlLayer = new google.maps.KmlLayer(kmlLayerElements);
 
+    const MarkerElement = new Array();
+    const Marker = new Array();
+
+    // 日野キャンパス1号館にマーカを表示するためのパラメータのconstオブジェクト
+    MarkerElement[0] = {
+      position: {lat:35.659055, lng:139.371251},
+      map: myMap
+    };
+
+    MarkerElement[1] = {
+      position: {lat:35.659113, lng:139.370752},
+      map: myMap
+    };
+
+    MarkerElement[2] = {
+      position: {lat:35.658407, lng:139.368288},
+      map: myMap
+    };
+
+    MarkerElement[3]={
+      position:{lat:35.659715, lng:139.367973},
+      map: myMap
+    };
+
+    MarkerElement[4]={
+      position:{lat:35.657864, lng:139.371923},
+      map: myMap
+    };
+
+    for(i=0;i<=4;i++){
+    Marker[i] =
+      new google.maps.Marker(MarkerElement[i]);
+    // 同様にコンストラクタが実行されると表示される
+  }
+
   const BusStop = new Array();
   const BusStopMarker = new Array();
 
@@ -265,6 +300,72 @@ for(i=0;i<=16;i++){
     new google.maps.Marker(BusStop[i]);
 
 }
+
+const InfoWindowElement = new Array();
+const InfoWindow = new Array();
+window.infoWindowArray = new Array();
+
+  InfoWindowElement[0] =
+    {content:
+      '<p><b>勝っちゃんらーめん</b></p><p>あっさりとした味が特徴のラーメン屋！</p><img src="img/kattyan1.jpg"width="220px" height="160px"/>'
+    };
+  InfoWindow[0] = new google.maps.InfoWindow(InfoWindowElement[0]);
+
+  InfoWindowElement[1] =
+    {content: '<p><b>中華そば珉珉</b></p><p>もちもち食感の八王子ラーメンが食べられるお店</p><img src="img/minmin2.jpg"width="220px" height="160px"/>'};
+  InfoWindow[1] = new google.maps.InfoWindow(InfoWindowElement[1]);
+
+  InfoWindowElement[2] =
+    {content: '<p><b>Kitchen&Cafe Canaan</b></p><p>オシャレな雰囲気の健康にやさしいキッチンカフェ</p><img src="img/canan2.jpg"width="220px" height="160px"/>'};
+  InfoWindow[2] = new google.maps.InfoWindow(InfoWindowElement[2]);
+
+  InfoWindowElement[3] =
+    {content: '<p><b>中華そば専門店あさひ軒</b></p><p>王道八王子ラーメンが楽しめる中華そば専門店！</p><img src="img/asahi1.jpg"width="220px" height="160px"/>'};
+  InfoWindow[3] = new google.maps.InfoWindow(InfoWindowElement[3]);
+
+  InfoWindowElement[4] =
+    {content: '<p><b>里やま</b></p><p>和食を中心とした幅広い一品料理を扱う居酒屋さん</p><img src="img/satoyama3.jpg"width="220px" height="160px"/>'};
+  InfoWindow[4] = new google.maps.InfoWindow(InfoWindowElement[4]);
+
+  for(i=0;i<=4;i++){
+    window.infoWindowArray.push(InfoWindow[i]);
+  }
+
+  Marker[0].addListener('click', ()=> {
+      window.infoWindowArray.forEach((val, index, array) => {
+        val.close();
+      });
+      InfoWindow[0].open(myMap, Marker[0]);
+    }
+  );
+
+  Marker[1].addListener('click', ()=>{
+    window.infoWindowArray.forEach((val, index, array) => {
+      val.close();
+    });
+    InfoWindow[1].open(myMap, Marker[1]);
+  });
+
+  Marker[2].addListener('click', ()=>{
+    window.infoWindowArray.forEach((val, index, array) => {
+      val.close();
+    });
+    InfoWindow[2].open(myMap, Marker[2]);
+  });
+
+  Marker[3].addListener('click', ()=>{
+    window.infoWindowArray.forEach((val, index, array) => {
+      val.close();
+    });
+    InfoWindow[3].open(myMap, Marker[3]);
+  });
+
+  Marker[4].addListener('click', ()=>{
+    window.infoWindowArray.forEach((val, index, array) => {
+      val.close();
+    });
+    InfoWindow[4].open(myMap, Marker[4]);
+  });
 
 } // window.addEventListenerに登録する関数オブジェクトの記述ここまで
 ); // window.addEventListener関数自体は，このセミコロンで終わって実行される
