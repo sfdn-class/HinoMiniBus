@@ -3,9 +3,9 @@ window.addEventListener('load', () => { //登録する関数オブジェクト�
   //地図表示に必要なパラメータを保持するconstオブジェクト
   const mapElement = {
     // 日野キャンパス2号館をの緯度経度を中心にして表示する
-    center: {lat:(35.660719+35.656946)/2, lng:(139.400892+39.398387)/2},
+    center: {lat:(35.666341+35.665476)/2, lng:(139.413669+139.406911)/2},
     // ズームレベル
-    zoom: 18
+    zoom: 16
   };
 
   // 地図の作成
@@ -15,10 +15,11 @@ window.addEventListener('load', () => { //登録する関数オブジェクト�
   // 線の座標の配列を作る
   // 日野キャンパスから豊田駅まで
   const routeCoodinates = [
-    {lat:35.660719, lng:139.400892},//壽徳寺
-    {lat:35.660192, lng:139.401155},
-    {lat:35.657525, lng:139.397668},
-    {lat:35.656946, lng:139.398387}//北野街道口
+    {lat:35.665476, lng:139.406911},//高幡橋西
+    {lat:35.665369, lng:139.408170},
+    {lat:35.665369, lng:139.408170},
+    {lat:35.666938, lng:139.413127},
+    {lat:35.666341, lng:139.413669}//ふれあい場所
   ];
 
   // Polylineのパラメータを作る
@@ -38,16 +39,16 @@ window.addEventListener('load', () => { //登録する関数オブジェクト�
 
   const firstMarkerElement = {
     //タイトルをつける
-    title: '壽徳寺',
+    title: 'ふれあい橋',
     // 1号館の緯度経度
-    position:{lat:35.660719, lng:139.400892},
+    position:  {lat:35.666341, lng:139.413669},
     // どのマップオブジェクトに表示するか
     map: myMap
   };
   // ダイレックスにマーカを表示するためのパラメータ
   const secondMarkerElement = {
-    title: '北野街道口',
-    position:{lat:35.656946, lng:139.398387},
+    title: '高幡橋西',
+    position:{lat:35.665476, lng:139.406911},
     map: myMap
   };
 
@@ -63,13 +64,13 @@ window.addEventListener('load', () => { //登録する関数オブジェクト�
 
   // 情報ウィンドウを二つ作成
   const firstInfoWindowElement =
-    {content: '<p>壽徳寺</p>'};
+    {content: '<p>ふれあい橋</p>'};
   const firstInfoWindow = new google.maps.InfoWindow(firstInfoWindowElement);
   //配列に追加する
   window.infoWindowArray.push(firstInfoWindow);
   // 2つめのマーカオブジェクトの作成
   const secondInfoWindowElement =
-    {content: '<p>北野街道口</p>'};
+    {content: '<p>高幡橋西</p>'};
   const secondInfoWindow = new google.maps.InfoWindow(secondInfoWindowElement);
   // 同様に配列に追加する
   window.infoWindowArray.push(secondInfoWindow)
