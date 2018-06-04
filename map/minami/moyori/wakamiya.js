@@ -3,7 +3,7 @@ window.addEventListener('load', () => { //登録する関数オブジェクト�
   //地図表示に必要なパラメータを保持するconstオブジェクト
   const mapElement = {
     // 日野キャンパス2号館をの緯度経度を中心にして表示する
-    center: {lat:(35.654540+35.656946)/2, lng:(139.398387+139.397083)/2},
+    center: {lat:(35.663837+35.662657)/2, lng:(139.390100+139.388994)/2},
     // ズームレベル
     zoom: 17
   };
@@ -15,11 +15,11 @@ window.addEventListener('load', () => { //登録する関数オブジェクト�
   // 線の座標の配列を作る
   // 日野キャンパスから豊田駅まで
   const routeCoodinates = [
-    {lat:35.656946, lng:139.398387},//北野街道口
-    {lat:35.656223, lng:139.398728},
-    {lat:35.654880, lng:139.397043},
-    {lat:35.654645, lng:139.397258},
-    {lat:35.654540, lng:139.397083}//熊野神社
+    {lat:35.663837, lng:139.390100},//東豊田
+    {lat:35.663163, lng:139.389267},
+    {lat:35.663512, lng:139.388613},
+    {lat:35.663338, lng:139.387680},
+    {lat:35.663101, lng:139.387797}//若宮神社
   ];
 
   // Polylineのパラメータを作る
@@ -39,16 +39,16 @@ window.addEventListener('load', () => { //登録する関数オブジェクト�
 
   const firstMarkerElement = {
     //タイトルをつける
-    title: '熊野神社',
+    title: '若宮神社',
     // 1号館の緯度経度
-    position: {lat:35.654540, lng:139.397083},
+    position:{lat:35.663101, lng:139.387797},
     // どのマップオブジェクトに表示するか
     map: myMap
   };
   // ダイレックスにマーカを表示するためのパラメータ
   const secondMarkerElement = {
-    title: '北野街道口',
-    position:{lat:35.656946, lng:139.398387},
+    title: '東豊田',
+    position:{lat:35.663837, lng:139.390100},
     map: myMap
   };
 
@@ -64,13 +64,13 @@ window.addEventListener('load', () => { //登録する関数オブジェクト�
 
   // 情報ウィンドウを二つ作成
   const firstInfoWindowElement =
-    {content: '<p>熊野神社</p>'};
+    {content: '<p>若宮神社</p>'};
   const firstInfoWindow = new google.maps.InfoWindow(firstInfoWindowElement);
   //配列に追加する
   window.infoWindowArray.push(firstInfoWindow);
   // 2つめのマーカオブジェクトの作成
   const secondInfoWindowElement =
-    {content: '<p>北野街道口</p>'};
+    {content: '<p>東豊田</p>'};
   const secondInfoWindow = new google.maps.InfoWindow(secondInfoWindowElement);
   // 同様に配列に追加する
   window.infoWindowArray.push(secondInfoWindow)
