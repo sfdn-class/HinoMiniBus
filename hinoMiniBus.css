@@ -1,4 +1,5 @@
 html, body {
+text-align: center;
     height: 100%;
     width:100%;
     margin: 0;
@@ -28,33 +29,9 @@ li a {
 li a:hover {
     background-color: #111;
 }
-#map,
-#map_Shinai,
-#map_Misawa,
-#map_Minami,
-#map_Asahi,
-#map_Otikawa,
-#map_Hirayama,
-#map_Kawabe{
+#map{
   width:100%;
   min-height: 250px;
   height: 500px;
 
-}
-#section-body{
-  position:relative;
-  z-index: 0;
-  top:0;
-  left:0;
-
-}
-.detaill{
-  margin: 0;
-  padding:100px;
-  color: #ffffff;
-  background-color: #0000ff;
-  display:none;
-}
-.show{
-  display:block;
 }
