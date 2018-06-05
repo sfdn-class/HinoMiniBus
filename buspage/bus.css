@@ -1,0 +1,29 @@
+//各路線ページのcss
+
+html, body {
+    height: 100%;
+    margin: auto;
+    font-family: Meiryo;
+}
+
+p{text-align:center;}
+
+p.mozi1 { font-size: 280%; }
+
+p.mozi2 { font-size: 200%; }
+
+img {
+    border-radius: 20px;
+}
+
+#sinaimap {
+    height: 500px;
+    width: 90%;
+    top: 10px;
+    margin: auto;
+}
+
+#backdesign{
+    background-image: url("img/design/backdesign.png");
+    background-size: 100% 100%;
+}
