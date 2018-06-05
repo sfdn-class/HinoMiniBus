@@ -4,51 +4,33 @@
 // 全部のコンテンツの読み込みが終了した時に自動的に，
 // 登録しておいた関数オブジェクトが次々と呼ばれる
 window.addEventListener('load', () => { //登録する関数オブジェクト記述開始
-  //地図表示に必要なパラメータを保持するconstオブジェクト
-  const mapElement = {
-    // 日野キャンパス2号館をの緯度経度を中心にして表示する
+
+//市内路線MAP－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－
+
+  const mapElement_sinai = {
     center: {lat:35.670511, lng:139.400045},
-    // ズームレベル
     zoom: 14
   };
 
-  // 地図を保持するためのconstオブジェクトmyMapを宣言し，
-  // GoogleMapsのコンストラクタの引数に，先に定義した地図表示に必要なパラメータを食わせる
   const myMap =
-    new google.maps.Map(document.getElementById('sinaimap'), mapElement);
-  // コンストラクタが実行されると表示される
-
-  // 日野キャンパス1号館にマーカを表示するためのパラメータのconstオブジェクト
-
-  // 同様にコンストラクタが実行されると表示される
+    new google.maps.Map(document.getElementById('map'), mapElement_sinai);
 
   const kmlLayerElements = {
-      // KMLファイルのURL
       url: 'http://cad.lolipop.jp/data/hino_mini_bus/route/siei.kml',
-      // インターネットから探せるサーバ上においておき，そのURLを記述する．
-      //ルートの場合関係ないが，レイヤ上のオブジェクトの方がInfoWindowよりも上にくる（抑制する）
       suppressInfoWindows: true,
-      // 地図オブジェクト
       map: myMap
     };
-    // KMLを表示するためのレイヤーのコンストラクタを実行する．
-    // これを実行すると，Googleのシステムが上記KMLファイルを読み込んで来て，表示してくれる
-    // もちろん複数作ることもできる．
+
     const kmlLayer = new google.maps.KmlLayer(kmlLayerElements);
 
 
     const MarkerElement = new Array();
     const Marker = new Array();
 
-    // 日野キャンパス1号館にマーカを表示するためのパラメータのconstオブジェクト
     MarkerElement[0] = {
-      // 1号館の緯度経度
       position: {lat:35.670039, lng:139.419473},
-      // どのマップオブジェクトに表示するか
       map: myMap
     };
-    // マーカのコンストラクタに，先に定義したマーカのパラメータのオブジェクトを食わせて
-    // オブジェクトを取り出す
 
     MarkerElement[1] = {
       position: {lat:35.680146, lng:139.397152},
@@ -542,6 +524,8 @@ window.infoWindowArray = new Array();
     });
     InfoWindow[4].open(myMap, Marker[4]);
   });
+
+//市内路線MAPここまで－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－
 
 } // window.addEventListenerに登録する関数オブジェクトの記述ここまで
 ); // window.addEventListener関数自体は，このセミコロンで終わって実行される
