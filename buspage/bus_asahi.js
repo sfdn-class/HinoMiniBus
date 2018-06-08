@@ -307,24 +307,24 @@ window.infoWindowArray = new Array();
 
   InfoWindowElement[0] =
     {content:
-      '<p><b>勝っちゃんらーめん</b></p><p>あっさりとした味が特徴のラーメン屋！</p><img src="img/asahi/kattyan1.jpg"width="220px" height="160px"/>'
+      '<p><b>勝っちゃんらーめん</b></p><p>あっさりとした味が特徴のラーメン屋！</p><p><img src="img/asahi/kattyan1.jpg"width="220px" height="160px" class="maru"/></p>'
     };
   InfoWindow[0] = new google.maps.InfoWindow(InfoWindowElement[0]);
 
   InfoWindowElement[1] =
-    {content: '<p><b>中華そば珉珉</b></p><p>もちもち食感の八王子ラーメンが食べられるお店</p><img src="img/asahi/minmin2.jpg"width="220px" height="160px"/>'};
+    {content: '<p><b>中華そば珉珉</b></p><p>もちもち食感の八王子ラーメンが食べられるお店</p><p><img src="img/asahi/minmin2.jpg"width="220px" height="160px" class="maru"/></p>'};
   InfoWindow[1] = new google.maps.InfoWindow(InfoWindowElement[1]);
 
   InfoWindowElement[2] =
-    {content: '<p><b>Kitchen&Cafe Canaan</b></p><p>オシャレな雰囲気の健康にやさしいキッチンカフェ</p><img src="img/asahi/canan2.jpg"width="220px" height="160px"/>'};
+    {content: '<p><b>Kitchen&Cafe Canaan</b></p><p>オシャレな雰囲気の健康にやさしいキッチンカフェ</p><p><img src="img/asahi/canan2.jpg"width="220px" height="160px" class="maru"/></p>'};
   InfoWindow[2] = new google.maps.InfoWindow(InfoWindowElement[2]);
 
   InfoWindowElement[3] =
-    {content: '<p><b>中華そば専門店あさひ軒</b></p><p>王道八王子ラーメンが楽しめる中華そば専門店！</p><img src="img/asahi/asahi1.jpg"width="220px" height="160px"/>'};
+    {content: '<p><b>中華そば専門店あさひ軒</b></p><p>王道八王子ラーメンが楽しめる中華そば専門店！</p><p><img src="img/asahi/asahi1.jpg"width="220px" height="160px" class="maru"/></p>'};
   InfoWindow[3] = new google.maps.InfoWindow(InfoWindowElement[3]);
 
   InfoWindowElement[4] =
-    {content: '<p><b>里やま</b></p><p>和食を中心とした幅広い一品料理を扱う居酒屋さん</p><img src="img/asahi/satoyama3.jpg"width="220px" height="160px"/>'};
+    {content: '<p><b>里やま</b></p><p>和食を中心とした幅広い一品料理を扱う居酒屋さん</p><p><img src="img/asahi/satoyama3.jpg"width="220px" height="160px" class="maru"/></p>'};
   InfoWindow[4] = new google.maps.InfoWindow(InfoWindowElement[4]);
 
   for(i=0;i<=4;i++){
