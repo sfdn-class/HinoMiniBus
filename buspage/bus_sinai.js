@@ -465,24 +465,24 @@ window.infoWindowArray = new Array();
 
   InfoWindowElement[0] =
     {content:
-      '<p><b>土方歳三資料館</b></p><p>土方歳三について知るならココ！</p><p><img src="img/sinai/hizikata2.jpg"width="220px" height="160px"/></p>'
+      '<p><b>土方歳三資料館</b></p><p>土方歳三について知るならココ！</p><p><img src="img/sinai/hizikata2.jpg"width="220px" height="160px" class="maru"/></p>'
     };
   InfoWindow[0] = new google.maps.InfoWindow(InfoWindowElement[0]);
 
   InfoWindowElement[1] =
-    {content: '<p><b>井上源三郎資料館</b></p><p>新撰組六番隊隊長井上源三郎についてがわかる！</p><p><img src="img/sinai/inoue1.jpg"width="220px" height="160px"/></p>'};
+    {content: '<p><b>井上源三郎資料館</b></p><p>新撰組六番隊隊長井上源三郎についてがわかる！</p><p><img src="img/sinai/inoue1.jpg"width="220px" height="160px" class="maru"/></p>'};
   InfoWindow[1] = new google.maps.InfoWindow(InfoWindowElement[1]);
 
   InfoWindowElement[2] =
-    {content: '<p><b>佐藤彦五郎新選組資料館</b></p><p>日野宿名主を努めた佐藤彦五郎の新撰組の資料が見られる資料館</p><p><img src="img/sinai/satou1.jpg"width="220px" height="160px"/></p>'};
+    {content: '<p><b>佐藤彦五郎新選組資料館</b></p><p>日野宿名主を努めた佐藤彦五郎の新撰組の資料が見られる資料館</p><p><img src="img/sinai/satou1.jpg"width="220px" height="160px" class="maru"/></p>'};
   InfoWindow[2] = new google.maps.InfoWindow(InfoWindowElement[2]);
 
   InfoWindowElement[3] =
-    {content: '<p><b>日野市立新選組のふるさと歴史館</b></p><p>新撰組の誕生を感じられる歴史観</p><p><img src="img/sinai/furusato2.jpg"width="220px" height="160px"/></p>'};
+    {content: '<p><b>日野市立新選組のふるさと歴史館</b></p><p>新撰組の誕生を感じられる歴史観</p><p><img src="img/sinai/furusato2.jpg"width="220px" height="160px" class="maru"/></p>'};
   InfoWindow[3] = new google.maps.InfoWindow(InfoWindowElement[3]);
 
   InfoWindowElement[4] =
-    {content: '<p><b>日野宿本陣</b></p><p>都内で唯一残る江戸時代に建てられた本陣建物！</p><p><img src="img/sinai/hinozyuku1.jpg"width="220px" height="160px"/></p>'};
+    {content: '<p><b>日野宿本陣</b></p><p>都内で唯一残る江戸時代に建てられた本陣建物！</p><p><img src="img/sinai/hinozyuku1.jpg"width="220px" height="160px" class="maru"/></p>'};
   InfoWindow[4] = new google.maps.InfoWindow(InfoWindowElement[4]);
 
   for(i=0;i<=4;i++){
