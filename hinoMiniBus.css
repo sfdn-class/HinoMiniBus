@@ -6,15 +6,21 @@ text-align: center;
     padding: 0;
 }
 
-ul {
+#menu ul {
     list-style-type: none;
     margin: 0;
     padding: 0,5;
     overflow: hidden;
     background-color: #333;
 }
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0,5;
+    overflow: hidden;
 
-li {
+}
+ li {
     float: left;
 }
 
@@ -26,7 +32,7 @@ li a {
     text-decoration: none;
 }
 
-li a:hover {
+#menu li a:hover {
     background-color: #111;
 }
 #map{
@@ -35,3 +41,10 @@ li a:hover {
   height: 500px;
 
 }
+ .blue img{
+   width:100%;
+ }
+
+ .blue {
+   background-color: #eef7fc;
+ }
