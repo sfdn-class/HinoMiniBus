@@ -6,11 +6,29 @@
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1.0">
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script type="text/javascript" src="./bus_sinai.js"></script>
+    <script type="text/javascript" src="./moyori.js"></script>
     <link rel="stylesheet" type="text/css" href="bus.css">
 
 </head>
 <body>
+  <div id="header">
+    <h1>みにばす旅</h1>
+    <div id="menu">
+      <ul class = "tabs-nav">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="./bus_sinai.html" target="_self">市内路</a></li>
+        <li><a href="./bus_minami.html" target="_self">南平</a></li>
+        <li><a href="./bus_misawadai.html" target="_self">三沢台</a></li>
+        <li><a href="./bus_asahi.html" target="_self">旭が丘</a></li>
+        <li><a href="./bus_otikawa.html" target="_self">落川</a></li>
+        <li><a href="./bus_hirayama.html" target="_self">平山</a></li>
+        <li><a href="./bus_kawabe.html" target="_self">川辺堀之内</a></li>
+        <li><a href="" target="_self">参考文献</a></li>
+      </ul>
+    </div><!--end of menu-->
+  </div><!--end of header-->
   <div id="map"></div>
   <br>
   <br>
@@ -27,7 +45,18 @@
     <br><br>
     <p class="mozi2">1.土方歳三資料館</p>
     <p><b>土方歳三について知るならココ！</b></p>
-    <p><img src="img/sinai/hizikata2.jpg" width="400px" height="300px" class="maru"></p>
+
+    <ul class="content">
+      <li><img src="img/sinai/hizikata2.jpg" width="400px" height="300px" class="maru"></li>
+      <li class="hide"><img src="img/sinai/hizikata1.jpg" width="400px" height="300px" class="maru"></li>
+      <li class="hide"><div class="map" id="map_hizikata"></div></li>
+    </ul>
+    <ul class="tab">
+      <li class="select">img1</li>
+      <li style="background:#5882FA">img2</li>
+      <li>MAP</li>
+    </ul>
+
     <p>住所：〒191-0021 東京都日野市石田２丁目１−３</p>
     <p>連絡先：042-581-1493</p>
     <p>営業時間：11:00~16:00</p>
@@ -35,12 +64,22 @@
     <p>最寄りのバス停：万願寺駅　徒歩4分</p>
     <p>備考：大人500円、子供300円</p>
     <p>公式サイト：<a href="http://www.hijikata-toshizo.jp/">http://www.hijikata-toshizo.jp/</a>
+    <p>最寄りの時刻表：<a href="https://www.navitime.co.jp/diagram/bus/00021339/00006349/0/">万願寺駅</a>
     <br><br><br><br>
   </div>
 
     <p class="mozi2">2.井上源三郎資料館</p>
     <p><b>新撰組六番隊隊長井上源三郎についてがわかる！</b></p>
-    <p><img src="img/sinai/inoue1.jpg" width="400px" height="300px" class="maru"></p>
+    <ul class="content2">
+      <li><img src="img/sinai/inoue1.jpg" width="400px" height="300px" class="maru"></li>
+      <li class="hide"><img src="img/sinai/inoue2.jpg" width="400px" height="300px" class="maru"></li>
+      <li class="hide"><div class="map" id="map_inoue"></div></li>
+    </ul>
+      <ul class="tab2">
+      <li class="select2">img1</li>
+      <li style="background:#5882FA">img2</li>
+      <li>MAP</li>
+    </ul>
     <p>住所：〒191-0011 東京都日野市日野本町４丁目１１−１２</p>
     <p>連絡先：042-581-3957</p>
     <p>営業時間：12:00~16:00</p>
@@ -48,13 +87,23 @@
     <p>最寄りのバス停：日野本町　徒歩3分</p>
     <p>備考：大人500円、子供300円</p>
     <p>公式サイト：<a href="http://genzaburo.web.fc2.com/">http://genzaburo.web.fc2.com/</a>
+    <p>最寄りの時刻表：<a href="https://www.navitime.co.jp/diagram/bus/00021111/00006349/0/">日野本町</a>
     <br><br>
 
   <div id="backdesign">
     <br><br>
     <p class="mozi2">3.佐藤彦五郎新選組資料館</p>
     <p><b>日野宿名主を努めた佐藤彦五郎の新撰組の資料が見られる資料館</b><p>
-    <p><img src="img/sinai/satou1.jpg" width="400px" height="300px" class="maru"></p>
+      <ul class="content3">
+        <li><img src="img/sinai/satou1.jpg" width="400px" height="300px" class="maru"></li>
+        <li class="hide"><img src="img/sinai/satou2.jpg" width="400px" height="300px" class="maru"></li>
+        <li class="hide"><div class="map" id="map_satou"></div></li>
+      </ul>
+        <ul class="tab3">
+        <li class="select3">img1</li>
+        <li style="background:#5882FA">img2</li>
+        <li>MAP</li>
+      </ul>
     <p>住所：〒191-0011 東京都日野市日野本町２丁目１５−５</p>
     <p>連絡先：042-581-0370</p>
     <p>営業時間：11:00~16:00</p>
@@ -62,12 +111,24 @@
     <p>最寄りのバス停：日野本町　徒歩4分</p>
     <p>備考：大人500円、子供300円</p>
     <p>公式サイト：<a href="https://sato-hikogorou.jimdo.com/">https://sato-hikogorou.jimdo.com/</a>
+    <p>最寄りの時刻表：<a href="https://www.navitime.co.jp/diagram/bus/00021111/00006349/0/">日野本町</a>
     <br><br><br><br>
   </div>
 
     <p class="mozi2">4.日野市立新選組のふるさと歴史館</p>
     <p><b>新撰組の誕生を感じられる歴史観</b></p>
-    <p><img src="img/sinai/furusato1.jpg" width="400px" height="300px" class="maru"></p>
+
+    <ul class="content4">
+      <li><img src="img/sinai/furusato1.jpg" width="400px" height="300px" class="maru"></li>
+      <li class="hide"><img src="img/sinai/furusato2.jpg" width="400px" height="300px" class="maru"></li>
+      <li class="hide"><div class="map" id="map_furusato"></div></li>
+    </ul>
+      <ul class="tab4">
+      <li class="select4">img1</li>
+      <li style="background:#5882FA">img2</li>
+      <li>MAP</li>
+    </ul>
+
     <p>住所：〒191-0016 東京都日野市神明４丁目１６−１</p>
     <p>連絡先：042-583-5100</p>
     <p>営業時間：9:00~17:00</p>
@@ -76,13 +137,25 @@
     <p>備考：大人200円、子供500円</p>
     <p>（日野宿本陣共通観覧券は大人300円、子供70円）</p>
     <p>公式サイト：<a href="http://www.shinsenr.jp/">http://www.shinsenr.jp/</a>
+    <p>最寄りの時刻表：<a href="https://www.navitime.co.jp/diagram/bus/00021100/00006349/0/">日野市役所</a>
     <br><br>
 
   <div id="backdesign">
     <br><br>
     <p class="mozi2">5.日野宿本陣</p>
     <p><b>都内で唯一残る江戸時代に建てられた本陣建物！</b><p>
-    <p><img src="img/sinai/hinozyuku3.jpg" width="400px" height="300px" class="maru"></p>
+
+      <ul class="content5">
+        <li><img src="img/sinai/hinozyuku3.jpg" width="400px" height="300px" class="maru"></li>
+        <li class="hide"><img src="img/sinai/hinozyuku2.jpg" width="400px" height="300px" class="maru"></li>
+        <li class="hide"><div class="map" id="map_hinozyuku"></div></li>
+      </ul>
+        <ul class="tab5">
+        <li class="select5">img1</li>
+        <li style="background:#5882FA">img2</li>
+        <li>MAP</li>
+      </ul>
+
     <p>住所：〒191-0011 東京都日野市日野本町２丁目１５−９</p>
     <p>連絡先：042-583-5100</p>
     <p>営業時間：9:30~17:00</p>
@@ -90,6 +163,7 @@
     <p>最寄りのバス停：日野本町　徒歩2分</p>
     <p>備考：大人200円、子供50円</p>
     <p>公式サイト：<a href="http://www.shinsenr.jp/honjin/">http://www.shinsenr.jp/honjin/</a>
+    <p>最寄りの時刻表：<a href="https://www.navitime.co.jp/diagram/bus/00021111/00006349/0/">日野本町</a>
     <br><br><br><br>
   </div>
 
