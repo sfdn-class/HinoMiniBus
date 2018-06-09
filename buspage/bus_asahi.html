@@ -2,15 +2,33 @@
 <!-- display_marker.html -->
 <html>
 <head>
-    <title>旭が丘路線</title>
+    <title>旭が丘循環路線</title>
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1.0">
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script type="text/javascript" src="./bus_asahi.js"></script>
+    <script type="text/javascript" src="./moyori.js"></script>
     <link rel="stylesheet" type="text/css" href="bus.css">
 
 </head>
 <body>
+  <div id="header">
+    <h1>みにばす旅</h1>
+    <div id="menu">
+      <ul class = "tabs-nav">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="./bus_sinai.html" target="_self">市内路</a></li>
+        <li><a href="./bus_minami.html" target="_self">南平</a></li>
+        <li><a href="./bus_misawadai.html" target="_self">三沢台</a></li>
+        <li><a href="./bus_asahi.html" target="_self">旭が丘</a></li>
+        <li><a href="./bus_otikawa.html" target="_self">落川</a></li>
+        <li><a href="./bus_hirayama.html" target="_self">平山</a></li>
+        <li><a href="./bus_kawabe.html" target="_self">川辺堀之内</a></li>
+        <li><a href="" target="_self">参考文献</a></li>
+      </ul>
+    </div><!--end of menu-->
+  </div><!--end of header-->
   <div id="map"></div>
   <br>
   <br>
@@ -27,19 +45,38 @@
     <br><br>
     <p class="mozi2">1.勝っちゃんらーめん</p>
     <p><b>あっさりとした味が特徴のラーメン屋！</b></p>
-    <p><img src="img/asahi/asahi1.jpg" width="400px" height="300px" class="maru"></p>
+    <ul class="content">
+      <li><img src="img/asahi/kattyan1.jpg" width="400px" height="300px" class="maru"></li>
+      <li class="hide"><img src="img/asahi/kattyan2.jpg" width="400px" height="300px" class="maru"></li>
+      <li class="hide"><div class="map" id="map_kattyan"></div></li>
+    </ul>
+    <ul class="tab">
+      <li class="select">img1</li>
+      <li style="background:#5882FA">img2</li>
+      <li>MAP</li>
+    </ul>
     <p>住所：〒191-0065 東京都日野市旭が丘２丁目３−１７</p>
     <p>営業時間：11:30~14:30、日曜のみ17:00~20:00</p>
     <p>定休日：月曜日、木曜日</p>
     <p>最寄りのバス停：旭が丘　徒歩1分</p>
     <p>備考：~999円</p>
     <p>食べログ：<a href="https://tabelog.com/tokyo/A1329/A132903/13217925/">https://tabelog.com/tokyo/A1329/A132903/13217925/</a>
+    <p>最寄りの時刻表：<a href="https://www.navitime.co.jp/diagram/bus/00020085/00006507/1/">旭が丘</a>
     <br><br><br><br>
   </div>
 
     <p class="mozi2">2.中華そば珉珉</p>
     <p><b>もちもち食感の八王子ラーメンが食べられるお店</b></p>
-    <p><img src="img/asahi/minmin1.jpg" width="400px" height="300px" class="maru"></p>
+    <ul class="content2">
+      <li><img src="img/asahi/minmin1.jpg" width="400px" height="300px" class="maru"></li>
+      <li class="hide"><img src="img/asahi/minmin2.jpg" width="400px" height="300px" class="maru"></li>
+      <li class="hide"><div class="map" id="map_minmin"></div></li>
+    </ul>
+    <ul class="tab2">
+      <li class="select2">img1</li>
+      <li style="background:#5882FA">img2</li>
+      <li>MAP</li>
+    </ul>
     <p>住所：〒191-0065 東京都日野市旭が丘２丁目５−４</p>
     <p>連絡先：090-7248-2027</p>
     <p>営業時間：11:00~16:00、17:00~22:00</p>
@@ -47,13 +84,23 @@
     <p>最寄りのバス停：旭が丘　徒歩2分</p>
     <p>備考：~999円</p>
     <p>食べログ：<a href="https://tabelog.com/tokyo/A1329/A132903/13205812/">https://tabelog.com/tokyo/A1329/A132903/13205812/</a>
+    <p>最寄りの時刻表：<a href="https://www.navitime.co.jp/diagram/bus/00020085/00006507/1/">旭が丘</a>
     <br><br>
 
   <div id="backdesign">
     <br><br>
     <p class="mozi2">3.里やま</p>
     <p><b>和食を中心とした幅広い一品料理を扱う居酒屋さん</b><p>
-    <p><img src="img/asahi/satoyama3.jpg" width="400px" height="300px" class="maru"></p>
+      <ul class="content3">
+        <li><img src="img/asahi/satoyama3.jpg" width="400px" height="300px" class="maru"></li>
+        <li class="hide"><img src="img/asahi/satoyama2.jpg" width="400px" height="300px" class="maru"></li>
+        <li class="hide"><div class="map" id="map_satoyama"></div></li>
+      </ul>
+      <ul class="tab3">
+        <li class="select3">img1</li>
+        <li style="background:#5882FA">img2</li>
+        <li>MAP</li>
+      </ul>
     <p>住所：〒191-0065 東京都日野市旭が丘３丁目２−２４ 旭ケ丘ハイツ 1F</p>
     <p>連絡先：042-583-8948</p>
     <p>営業時間：11:30~14:00、17:00~23:00</p>
@@ -61,12 +108,22 @@
     <p>最寄りのバス停：旭が丘　徒歩2分</p>
     <p>備考：1000円~1999円</p>
     <p>食べログ：<a href="https://tabelog.com/tokyo/A1329/A132903/13106866/">https://tabelog.com/tokyo/A1329/A132903/13106866/</a>
+    <p>最寄りの時刻表：<a href="https://www.navitime.co.jp/diagram/bus/00020085/00006507/1/">旭が丘</a>
     <br><br><br><br>
   </div>
 
     <p class="mozi2">4.Kitchen&Cafe Canaan</p>
     <p><b>オシャレな雰囲気の健康にやさしいキッチンカフェ</b></p>
-    <p><img src="img/asahi/canan1.jpg" width="400px" height="300px" class="maru"></p>
+    <ul class="content4">
+      <li><img src="img/asahi/canan1.jpg" width="400px" height="300px" class="maru"></li>
+      <li class="hide"><img src="img/asahi/canan2.jpg" width="400px" height="300px" class="maru"></li>
+      <li class="hide"><div class="map" id="map_canan"></div></li>
+    </ul>
+    <ul class="tab4">
+      <li class="select4">img1</li>
+      <li style="background:#5882FA">img2</li>
+      <li>MAP</li>
+    </ul>
     <p>住所：東京都日野市旭が丘3-6-6 1F</p>
     <p>連絡先：042-589-5411</p>
     <p>営業時間：11:00~16:00</p>
@@ -74,13 +131,23 @@
     <p>最寄りのバス停：首都大学東京前　徒歩3分</p>
     <p>備考：~999円</p>
     <p>公式サイト：<a href="http://www.hikarinoie.org/facility/shurou/canaan">http://www.hikarinoie.org/facility/shurou/canaan</a>
+    <p>最寄りの時刻表：<a href="https://www.navitime.co.jp/diagram/bus/00020481/00006507/1/">首都大学東京前</a>
     <br><br>
 
   <div id="backdesign">
     <br><br>
     <p class="mozi2">5.中華そば専門店あさひ軒</p>
     <p><b>王道八王子ラーメンが楽しめる中華そば専門店！</b><p>
-    <p><img src="img/asahi/asahi1.jpg" width="400px" height="300px" class="maru"></p>
+      <ul class="content5">
+        <li><img src="img/asahi/asahi1.jpg" width="400px" height="300px" class="maru"></li>
+        <li class="hide"><img src="img/asahi/asahi2.jpg" width="400px" height="300px" class="maru"></li>
+        <li class="hide"><div class="map" id="map_asahi"></div></li>
+      </ul>
+      <ul class="tab5">
+        <li class="select5">img1</li>
+        <li style="background:#5882FA">img2</li>
+        <li>MAP</li>
+      </ul>
     <p>住所：〒191-0065 東京都日野市旭が丘６−５−１ レスポアール旭ヶ丘</p>
     <p>連絡先：042-584-7333</p>
     <p>営業時間：11:00~21:00</p>
@@ -88,6 +155,7 @@
     <p>最寄りのバス停：首都大学東京前　徒歩2分</p>
     <p>備考：~999円</p>
     <p>食べログ：<a href="https://tabelog.com/tokyo/A1329/A132903/13066306/">https://tabelog.com/tokyo/A1329/A132903/13066306/</a>
+    <p>最寄りの時刻表：<a href="https://www.navitime.co.jp/diagram/bus/00020481/00006507/1/">首都大学東京前</a>
     <br><br><br><br>
   </div>
 
