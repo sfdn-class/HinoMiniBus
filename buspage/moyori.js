@@ -96,4 +96,23 @@ $(function() {
 		$(this).addClass('select5')
 	});
 
+	$('.tab6 li').click(function() {
+
+		//.index()を使いクリックされたタブが何番目かを調べ、
+		//indexという変数に代入します。
+		var index = $('.tab6 li').index(this);
+
+		//コンテンツを一度すべて非表示にし、
+		$('.content6 li').css('display','none');
+
+		//クリックされたタブと同じ順番のコンテンツを表示します。
+		$('.content6 li').eq(index).css('display','block');
+
+		//一度タブについているクラスselectを消し、
+		$('.tab5 li').removeClass('select6');
+
+		//クリックされたタブのみにクラスselectをつけます。
+		$(this).addClass('select6')
+	});
+
 });

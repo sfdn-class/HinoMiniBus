@@ -88,6 +88,34 @@ h1{
   border-radius: 20px
 }
 
+#map_asakawa,#map_hieda,#map_hinolibrary,#map_horinouti,#map_fureai,#map_renga{
+  height: 100%;
+  width: 100%;
+  margin: auto;
+  border-radius: 20px
+}
+
+#map_jizouson,#map_jutoku,#map_kumano,#map_wakamiya,#map_zenseiji{
+  height: 100%;
+  width: 100%;
+  margin: auto;
+  border-radius: 20px
+}
+
+#map_inouebakery,#map_cafededango,#map_pakupakukumokumadou,#map_artigianogelateria{
+  height: 100%;
+  width: 100%;
+  margin: auto;
+  border-radius: 20px
+}
+
+#map_tokotoko,#map_hijikatanouenn,#map_mogusaenn,#map_nukumoriichi{
+  height: 100%;
+  width: 100%;
+  margin: auto;
+  border-radius: 20px
+}
+
 
 
 #backdesign{
@@ -95,13 +123,13 @@ h1{
     background-size: 100% 100%;
 }
 
-.tab,.tab2,.tab3,.tab4,.tab5{
+.tab,.tab2,.tab3,.tab4,.tab5,.tab6{
   width: 280px;
   margin-right: auto;
   margin-left: auto;
   overflow:hidden;
 }
-.tab li,.tab2 li,.tab3 li,.tab4 li,.tab5 li{
+.tab li,.tab2 li,.tab3 li,.tab4 li,.tab5 li,.tab6 li{
   float: left;
   list-style:none;
   background:#248;
@@ -109,12 +137,12 @@ h1{
   color: white;
   border-radius: 20px;
 }
-.tab li.select,.tab2 li.select2,.tab3 li.select3,.tab4 li.select4,.tab5 li.select5{
+.tab li.select,.tab2 li.select2,.tab3 li.select3,.tab4 li.select4,.tab5 li.select5,.tab6.select6{
   float: left;
   list-style:none;
   background:#248;
 }
-.content li,.content2 li,.content3 li,.content4 li,.content5 li{
+.content li,.content2 li,.content3 li,.content4 li,.content5 li,.content6 li{
   list-style:none;
   background:white;
   margin:auto auto;
