@@ -66,19 +66,99 @@ p{
 
 }
 
-
 #theam ul {
-position: relative;
   display: flex;
   list-style: none;
   flex-wrap: wrap; /* 折り返し */
-  margin:5%;
+  margin:0;
+  padding:0;
+list-style: none;
+top: 0;
+text-align: center;
+}
+#theam ul li{
+  width:22%;
+  margin:1.5%;
+}
+#theam ul li dl {
+  width:100%;
+  height: 100%;
+  margin:0;
+}
+#theam img{
+  position:relative;
+  width:100%;
+  margin: 0;
+}
+#theam ul {
+letter-spacing: -1em;
+overflow: hidden;
+display: inline-block;
+}
+#theam ul li {
+display: inline-block;
+position: relative;
+overflow: hidden;
+margin: 0 5px;
+letter-spacing: 0;
+}
+#theam ul dl {
+position: absolute;
+top: 0;
+margin: 0;
+padding: 20px 25px;
+box-sizing: border-box;
+color: #fff;
+background: rgba(100,100,100,.9);
+}
+#theam ul dl dt {
+margin-bottom: 0.3em;
+}
+#theam ul dl dd {
+margin: 0;
+font-size: 10px;
+line-height: 1.6;
+text-align: justify;
+word-break: break-all;
+}
+#theam ul dl dd:last-of-type {
+margin-top: 10px;
+text-align: right;
+}
+
+/* type1 */
+.downup dl {
+opacity: 0;
+-webkit-transform: translateY(100%);
+transform: translateY(100%);
+-webkit-transition: opacity 0.6s, -webkit-transform 0.6s;
+transition: opacity 0.6s, transform 0.6s;
+}
+.downup:hover dl {
+opacity: 1;
+-webkit-transform: translateY(0);
+transform: translateY(0);
+}
+
+
+/*#theam ul {
+  position: relative;
+  display: flex;
+  list-style: none;
+  flex-wrap: wrap; /* 折り返し */
+  /*margin:5%;
   padding:0;
 
 }
-#theam li{
+#theam li
+{
   width:22%;
-  margin:1.5%
+  margin:1.5%;
+}
+
+#theam li{
+overflow: hidden;
+display: inline-block;
 }
 
 #theam li a {
@@ -86,13 +166,38 @@ position: relative;
   text-decoration: none;
 }
 
+#theam li span{
+  width:100%;
+  height: 100%;
+}
+.downup span {
+position: absolute;
+top: 0;
+margin: 0;
+padding: 20px 25px;
+box-sizing: border-box;
+color: #fff;
+background: rgba(205,92,92,.9);
+}
 
+ul span {
+  margin: 0;
+  font-size: 10px;
+  line-height: 1.6;
+  text-align: justify;
+  word-break: break-all;
+margin-bottom: 0.3em;
+}
+
+*/
  .blue img{
    position: relative;
-   margin-bottom:-2%;
+   margin:0;
    padding:0;
    width:100%;
+  vertical-align:bottom;
  }
+
 
  .blueContant {
    position: relative;
