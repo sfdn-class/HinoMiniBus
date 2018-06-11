@@ -367,5 +367,174 @@ window.infoWindowArray = new Array();
     InfoWindow[4].open(myMap, Marker[4]);
   });
 
+  //ここまで旭が丘路線ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー
+
+  const mapElement_kattyan = {
+    // 日野キャンパス2号館をの緯度経度を中心にして表示する
+    center: {lat:35.658959, lng:139.371403},
+    // ズームレベル
+    zoom: 20
+  };
+
+  // 地図の作成
+  const map_kattyan =
+    new google.maps.Map(document.getElementById('map_kattyan'), mapElement_kattyan);
+
+  // 線の座標の配列を作る
+  // 日野キャンパスから豊田駅まで
+  const routeCoodinates_kattyan = [
+    {lat:35.659055, lng:139.371251},
+    {lat:35.659003, lng:139.371269},
+    {lat:35.658979, lng:139.371575},
+    {lat:35.658941, lng:139.371583}
+  ];
+
+  // Polylineのパラメータを作る
+  const routeElements_kattyan = {
+    path: routeCoodinates_kattyan, //作った線の座標の配列
+    geodesic: true, //球に沿った線にするか(true)，平面に沿った線にするか(false)
+    strokeColor: '#FF0000', // 色指定．CSSの色指定と同じ
+    strokeOpacity: 0.5, //透過の設定．0.0〜1.0
+    strokeWeight: 5 //線の太さ
+  };
+  // 線のオブジェクトを作る
+  const routePolyline_kattyan = new google.maps.Polyline(routeElements_kattyan);
+  // 地図に表示する
+  routePolyline_kattyan.setMap(map_kattyan);
+
+  const mapElement_minmin = {
+    // 日野キャンパス2号館をの緯度経度を中心にして表示する
+    center: {lat:35.658982, lng:139.371161},
+    // ズームレベル
+    zoom: 19
+  };
+
+  // 地図の作成
+  const map_minmin =
+    new google.maps.Map(document.getElementById('map_minmin'), mapElement_minmin);
+
+  // 線の座標の配列を作る
+  // 日野キャンパスから豊田駅まで
+  const routeCoodinates_minmin = [
+    {lat:35.659113, lng:139.370752},
+    {lat:35.659032, lng:139.370748},
+    {lat:35.658979, lng:139.371575},
+    {lat:35.658941, lng:139.371583}
+  ];
+
+  // Polylineのパラメータを作る
+  const routeElements_minmin = {
+    path: routeCoodinates_minmin, //作った線の座標の配列
+    geodesic: true, //球に沿った線にするか(true)，平面に沿った線にするか(false)
+    strokeColor: '#FF0000', // 色指定．CSSの色指定と同じ
+    strokeOpacity: 0.5, //透過の設定．0.0〜1.0
+    strokeWeight: 5 //線の太さ
+  };
+  // 線のオブジェクトを作る
+  const routePolyline_minmin = new google.maps.Polyline(routeElements_minmin);
+  // 地図に表示する
+  routePolyline_minmin.setMap(map_minmin);
+
+  const mapElement_satoyama = {
+    // 日野キャンパス2号館をの緯度経度を中心にして表示する
+    center: {lat:35.658519, lng:139.371818},
+    // ズームレベル
+    zoom: 17.5
+  };
+
+  // 地図の作成
+  const map_satoyama =
+    new google.maps.Map(document.getElementById('map_satoyama'), mapElement_satoyama);
+
+  // 線の座標の配列を作る
+  // 日野キャンパスから豊田駅まで
+  const routeCoodinates_satoyama = [
+    {lat:35.657864, lng:139.371923},
+    {lat:35.657961, lng:139.371917},
+    {lat:35.657946, lng:139.372070},
+    {lat:35.658944, lng:139.372151},
+    {lat:35.658979, lng:139.371575},
+    {lat:35.658941, lng:139.371583}
+  ];
+
+  // Polylineのパラメータを作る
+  const routeElements_satoyama = {
+    path: routeCoodinates_satoyama, //作った線の座標の配列
+    geodesic: true, //球に沿った線にするか(true)，平面に沿った線にするか(false)
+    strokeColor: '#FF0000', // 色指定．CSSの色指定と同じ
+    strokeOpacity: 0.5, //透過の設定．0.0〜1.0
+    strokeWeight: 5 //線の太さ
+  };
+  // 線のオブジェクトを作る
+  const routePolyline_satoyama = new google.maps.Polyline(routeElements_satoyama);
+  // 地図に表示する
+  routePolyline_satoyama.setMap(map_satoyama);
+
+  const mapElement_asahi = {
+    // 日野キャンパス2号館をの緯度経度を中心にして表示する
+    center: {lat:35.660069, lng:139.368074},
+    // ズームレベル
+    zoom: 18
+  };
+
+  // 地図の作成
+  const map_asahi =
+    new google.maps.Map(document.getElementById('map_asahi'), mapElement_asahi);
+
+  // 線の座標の配列を作る
+  // 日野キャンパスから豊田駅まで
+  const routeCoodinates_asahi = [
+    {lat:35.659715, lng:139.367973},
+    {lat:35.659744, lng:139.368058},
+    {lat:35.660347, lng:139.368073}
+  ];
+
+  // Polylineのパラメータを作る
+  const routeElements_asahi = {
+    path: routeCoodinates_asahi, //作った線の座標の配列
+    geodesic: true, //球に沿った線にするか(true)，平面に沿った線にするか(false)
+    strokeColor: '#FF0000', // 色指定．CSSの色指定と同じ
+    strokeOpacity: 0.5, //透過の設定．0.0〜1.0
+    strokeWeight: 5 //線の太さ
+  };
+  // 線のオブジェクトを作る
+  const routePolyline_asahi = new google.maps.Polyline(routeElements_asahi);
+  // 地図に表示する
+  routePolyline_asahi.setMap(map_asahi);
+
+  const mapElement_canan = {
+    // 日野キャンパス2号館をの緯度経度を中心にして表示する
+    center: {lat:35.659311, lng:139.368127},
+    // ズームレベル
+    zoom: 17
+  };
+
+  // 地図の作成
+  const map_canan =
+    new google.maps.Map(document.getElementById('map_canan'), mapElement_canan);
+
+  // 線の座標の配列を作る
+  // 日野キャンパスから豊田駅まで
+  const routeCoodinates_canan = [
+    {lat:35.658407, lng:139.368288},
+    {lat:35.658426, lng:139.368159},
+    {lat:35.659043, lng:139.368191},
+    {lat:35.659054, lng:139.368019},
+    {lat:35.660347, lng:139.368073}
+  ];
+
+  // Polylineのパラメータを作る
+  const routeElements_canan = {
+    path: routeCoodinates_canan, //作った線の座標の配列
+    geodesic: true, //球に沿った線にするか(true)，平面に沿った線にするか(false)
+    strokeColor: '#FF0000', // 色指定．CSSの色指定と同じ
+    strokeOpacity: 0.5, //透過の設定．0.0〜1.0
+    strokeWeight: 5 //線の太さ
+  };
+  // 線のオブジェクトを作る
+  const routePolyline_canan = new google.maps.Polyline(routeElements_canan);
+  // 地図に表示する
+  routePolyline_canan.setMap(map_canan);
+
 } // window.addEventListenerに登録する関数オブジェクトの記述ここまで
 ); // window.addEventListener関数自体は，このセミコロンで終わって実行される
