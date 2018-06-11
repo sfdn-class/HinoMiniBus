@@ -6,11 +6,29 @@
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1.0">
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script type="text/javascript" src="./bus_hirayama.js"></script>
+    <script type="text/javascript" src="./moyori.js"></script>
     <link rel="stylesheet" type="text/css" href="bus.css">
 
 </head>
 <body>
+  <div id="header">
+    <h1>みにばす旅</h1>
+    <div id="menu">
+      <ul class = "tabs-nav">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="./bus_sinai.html" target="_self">市内路</a></li>
+        <li><a href="./bus_minami.html" target="_self">南平</a></li>
+        <li><a href="./bus_misawadai.html" target="_self">三沢台</a></li>
+        <li><a href="./bus_asahi.html" target="_self">旭が丘</a></li>
+        <li><a href="./bus_otikawa.html" target="_self">落川</a></li>
+        <li><a href="./bus_hirayama.html" target="_self">平山</a></li>
+        <li><a href="./bus_kawabe.html" target="_self">川辺堀之内</a></li>
+        <li><a href="" target="_self">参考文献</a></li>
+      </ul>
+    </div><!--end of menu-->
+  </div><!--end of header-->
   <div id="map"></div>
   <br>
   <br>
@@ -27,49 +45,89 @@
     <br><br>
     <p class="mozi2">1.都立平山城址公園</p>
     <p><b>お花見時には桜の名所に！まったりお散歩スポット</b></p>
-    <p><img src="img/hirayama/hirayama1.jpg" width="400px" height="300px" class="maru"></p>
+    <ul class="content">
+      <li><img src="img/hirayama/hirayama1.jpg" width="400px" height="300px" class="maru"></li>
+      <li class="hide"><img src="img/hirayama/hirayama2.jpg" width="400px" height="300px" class="maru"></li>
+      <li class="hide"><div class="map" id="map_hirayamapark"></div></li>
+    </ul>
+    <ul class="tab">
+      <li class="select">img1</li>
+      <li style="background:#5882FA">img2</li>
+      <li>MAP</li>
+    </ul>
     <p>住所：〒192-0355 東京都八王子市 堀之内</p>
     <p>連絡先：042-375-1240</p>
     <p>最寄りのバス停：平山台健康・市民支援センター　徒歩12分</p>
-    <p>参考サイト：<a href="https://www.tokyo-park.or.jp/park/format/index066.html">https://www.tokyo-park.or.jp/park/format/index066.html</a>
-    <p>公式Twitter：<a href="http://twitter.com/ParksHirayama">http://twitter.com/ParksHirayama</a>
+    <p>参考サイト：<a href="https://www.tokyo-park.or.jp/park/format/index066.html">https://www.tokyo-park.or.jp/park/format/index066.html</a></p>
+    <p>公式Twitter：<a href="http://twitter.com/ParksHirayama">http://twitter.com/ParksHirayama</a></p>
+    <p>最寄りの時刻表：<a href="https://www.navitime.co.jp/diagram/bus/00021659/00006585/1/">平山台健康・市民支援センター</a></p>
     <br><br><br><br>
   </div>
 
     <p class="mozi2">2.都立七生公園</p>
     <p><b>ハイキングに最適！自然が楽しめる公園</b></p>
-    <p><img src="img/hirayama/nanao1.jpg" width="400px" height="300px" class="maru"></p>
+    <ul class="content2">
+      <li><img src="img/hirayama/nanao1.jpg" width="400px" height="300px" class="maru"></li>
+      <li class="hide"><img src="img/hirayama/nanao2.jpg" width="400px" height="300px" class="maru"></li>
+      <li class="hide"><div class="map" id="map_nanao"></div></li>
+    </ul>
+    <ul class="tab2">
+      <li class="select2">img1</li>
+      <li style="background:#5882FA">img2</li>
+      <li>MAP</li>
+    </ul>
     <p>住所：〒191-0042 東京都 日野市程久保６丁目</p>
     <p>連絡先：042-591-1611</p>
     <p>最寄りのバス停：平山一丁目　徒歩15分</p>
-    <p>参考サイト：<a href="http://shinsenhino.com/archives/spot/park/050422075646.php">http://shinsenhino.com/archives/spot/park/050422075646.php</a>
+    <p>参考サイト：<a href="http://shinsenhino.com/archives/spot/park/050422075646.php">http://shinsenhino.com/archives/spot/park/050422075646.php</a></p>
+    <p>最寄りの時刻表：<a href="https://www.navitime.co.jp/diagram/bus/00021243/00006585/1/">平山一丁目</a></p>
     <br><br>
 
   <div id="backdesign">
     <br><br>
     <p class="mozi2">3.多摩動物公園</p>
     <p><b>日野市が誇る日本有数の動物園</b><p>
-    <p><img src="img/hirayama/tama1.jpg" width="400px" height="300px" class="maru"></p>
+      <ul class="content3">
+        <li><img src="img/hirayama/tama1.jpg" width="400px" height="300px" class="maru"></li>
+        <li class="hide"><img src="img/hirayama/tama2.jpg" width="400px" height="300px" class="maru"></li>
+        <li class="hide"><div class="map" id="map_tama"></div></li>
+      </ul>
+      <ul class="tab3">
+        <li class="select3">img1</li>
+        <li style="background:#5882FA">img2</li>
+        <li>MAP</li>
+      </ul>
     <p>住所：〒191-0041 東京都日野市程久保７丁目１−１</p>
     <p>連絡先：042-591-1611</p>
     <p>営業時間：9:30~17:00</p>
     <p>定休日：水曜日</p>
     <p>最寄りのバス停：平山一丁目　徒歩22分</p>
     <p>備考：一般600円、中学生200円、65歳以上300円（※団体、年間パスポートの場合別料金）</p>
-    <p>公式サイト：<a href="http://www.tokyo-zoo.net/zoo/tama/">http://www.tokyo-zoo.net/zoo/tama/</a>
+    <p>公式サイト：<a href="http://www.tokyo-zoo.net/zoo/tama/">http://www.tokyo-zoo.net/zoo/tama/</a></p>
+    <p>最寄りの時刻表：<a href="https://www.navitime.co.jp/diagram/bus/00021243/00006585/1/">平山一丁目</a></p>
     <br><br><br><br>
   </div>
 
     <p class="mozi2">4.京王れーるランド</p>
     <p><b>乗り物展示や運転体験ができる遊べる施設！</b></p>
-    <p><img src="img/hirayama/keiou1.jpg" width="400px" height="300px" class="maru"></p>
+    <ul class="content4">
+      <li><img src="img/hirayama/keiou1.jpg" width="400px" height="300px" class="maru"></li>
+      <li class="hide"><img src="img/hirayama/keiou2.jpg" width="400px" height="300px" class="maru"></li>
+      <li class="hide"><div class="map" id="map_keiou"></div></li>
+    </ul>
+    <ul class="tab4">
+      <li class="select4">img1</li>
+      <li style="background:#5882FA">img2</li>
+      <li>MAP</li>
+    </ul>
     <p>住所：〒191-0042 東京都日野市程久保３丁目３６−３９</p>
     <p>連絡先：042-593-3526</p>
     <p>営業時間：9:30~17:30</p>
     <p>定休日：水曜日</p>
     <p>最寄りのバス停：平山一丁目　徒歩21分</p>
     <p>備考：250円</p>
-    <p>公式サイト：<a href="http://www.keio-rail-land.jp/">http://www.keio-rail-land.jp/</a>
+    <p>公式サイト：<a href="http://www.keio-rail-land.jp/">http://www.keio-rail-land.jp/</a></p>
+    <p>最寄りの時刻表：<a href="https://www.navitime.co.jp/diagram/bus/00021243/00006585/1/">平山一丁目</a></p>
     <br><br>
 
 </body>
