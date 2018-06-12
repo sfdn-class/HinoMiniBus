@@ -1,4 +1,5 @@
 html, body {
+  font-family: "游明朝体","YuMincho";
 text-align: center;
     height: 100%;
     width:100%;
@@ -6,32 +7,302 @@ text-align: center;
     padding: 0;
 }
 
-ul {
+h1{
+  font-weight: normal;
+}
+
+p{
+  line-height: 3;
+}
+#header {
+  left:10%;
+  width:90%;
+  margin: auto;
+  display:flex;
+}
+
+#menu ul {
+  position: relative;
+  display: flex;
+  top:35%;
     list-style-type: none;
-    margin: 0;
+    margin:0;
     padding: 0,5;
     overflow: hidden;
-    background-color: #333;
 }
 
-li {
-    float: left;
+
+
+#menu li a {
+
+   font-family: "HiraginoSans-W1","ヒラギノ角ゴシック W0";
+   display: block;
+   color: black;
+   text-align: center;
+
+   padding: 0 16px;
+   text-decoration: none;
 }
 
-li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
+#menu li a:hover {
+    border-bottom: solid 2px rgb(150,150,150);
 }
 
-li a:hover {
-    background-color: #111;
-}
+
+
+
+
 #map{
   width:100%;
   min-height: 250px;
   height: 500px;
 
+}
+
+#theam ul {
+  display: flex;
+  list-style: none;
+  flex-wrap: wrap; /* 折り返し */
+  margin:0;
+  padding:0;
+  list-style: none;
+  top: 0;
+  text-align: center;
+}
+
+#theam ul li{
+  width:22%;
+  margin:1.5%;
+}
+#theam ul li dl {
+  width:100%;
+  height: 100%;
+  margin:0;
+}
+#theam img{
+  position:relative;
+  width:100%;
+  margin: 0;
+}
+#theam ul {
+letter-spacing: -1em;
+overflow: hidden;
+display: inline-block;
+}
+#theam ul li {
+display: inline-block;
+position: relative;
+overflow: hidden;
+margin: 0 5px;
+letter-spacing: 0;
+}
+#theam ul dl {
+position: absolute;
+top: 0;
+margin: 0;
+padding: 20px 25px;
+box-sizing: border-box;
+color: #fff;
+background: rgba(100,100,100,.9);
+}
+#theam ul dl dt {
+margin-bottom: 0.3em;
+}
+#theam ul dl dd {
+margin: 0;
+font-size: 10px;
+line-height: 1.6;
+text-align: justify;
+word-break: break-all;
+}
+#theam ul dl dd:last-of-type {
+margin-top: 10px;
+text-align: right;
+}/* type1 */
+.downup dl {
+opacity: 0;
+-webkit-transform: translateY(100%);
+transform: translateY(100%);
+-webkit-transition: opacity 0.6s, -webkit-transform 0.6s;
+transition: opacity 0.6s, transform 0.6s;
+}
+.downup:hover dl {
+opacity: 1;
+-webkit-transform: translateY(0);
+transform: translateY(0);
+}
+
+
+ .blue img{
+   position: relative;
+   margin:0;
+   padding:0;
+   width:100%;
+  vertical-align:bottom;
+ }
+
+
+ .blueContant {
+   position: relative;
+   padding-top: 10%;
+   padding-bottom: 10%;
+   margin: 0;
+   background-color: #eef7fc;
+ }
+
+#departureContant {
+  padding:5%;
+  margin: auto;
+  background-color: #efefef;
+}
+#departure h2{
+  font-style: normal;
+  font-weight: normal;
+  padding-bottom: 0;
+  margin-bottom: 0;
+  font-size: 31pt;
+}
+#departure h3{
+  font-style: normal;
+  font-weight: normal;
+  margin-top: 0;
+  padding-top: 0;
+  font-size: 16pt;
+}
+
+#departureContant table {
+  margin: auto;
+}
+
+#departureContant table th{
+  font-size: 21pt;
+  padding:26px;
+}
+#departureContant table td{
+  font-size: 16pt;
+  text-align: left;
+  padding:10px;
+}
+#departureContant table td a{
+text-decoration: none;
+color: black;
+}
+
+.slide img{
+  object-fit: cover;
+  width:1600px;
+  height:500px;
+}
+.slideshow {
+    background-color:rgb(0, 0, 0);
+    height: 465px;
+    min-width: 100vw;
+    overflow: hidden;
+    position: relative;
+}
+
+
+
+.slideshow-slides {
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    /* left は JavaScript で指定 */
+}
+.slideshow-slides .slide {
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+    /* left は JavaScript で指定 */
+}
+.slideshow-slides .slide img {
+    left: 50%;
+    margin-left: -800px;
+    position: absolute;
+}
+
+.slideshow-nav a,
+.slideshow-indicator a {
+    background-color: rgba(0, 0, 0, 0); /* for IE9 */
+    overflow: hidden;
+}
+.slideshow-nav a:before,
+.slideshow-indicator a:before {
+    content: url(./img/sprites.png);
+    display: inline-block;
+    font-size: 0;
+    line-height: 0;
+}
+
+.slideshow-nav a {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 72px;
+    height: 72px;
+    margin-top: -36px;
+}
+.slideshow-nav a.prev {
+    margin-left: -480px;
+}
+.slideshow-nav a.prev:before {
+    margin-top: -20px;
+}
+.slideshow-nav a.next {
+    margin-left: 408px;
+}
+.slideshow-nav a.next:before {
+    margin-left: -80px;
+    margin-top: -20px;
+}
+.slideshow-nav a.disabled {
+    display: none;
+}
+
+.slideshow-indicator {
+    bottom: 30px;
+    height: 16px;
+    left: 0;
+    position: absolute;
+    right: 0;
+    text-align: center;
+}
+.slideshow-indicator a {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin-left: 3px;
+    margin-right: 3px;
+}
+.slideshow-indicator a.active {
+    cursor: default;
+}
+.slideshow-indicator a:before {
+    margin-left: -110px;
+}
+.slideshow-indicator a.active:before {
+    margin-left: -130px;
+}
+
+/* JavsScript 無効時 */
+.no-js .slideshow {
+    height: auto;
+}
+.no-js .slideshow-slides {
+    height: auto;
+    position: static;
+}
+.no-js .slideshow-slides .slide {
+    display: block;
+    height: auto;
+    position: static;
+}
+.no-js .slideshow-slides .slide img {
+    margin: auto;
+    position: static;
+}
+.no-js .slideshow-nav,
+.no-js .slideshow-indicator {
+    display: none;
 }
