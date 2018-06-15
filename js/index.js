@@ -11,7 +11,7 @@ $(function () {
         var $container = $(this),                                 // a
             $slideGroup = $container.find('.slideshow-slides'),   // b
             $slides = $slideGroup.find('.slide'),                 // c
-            $nav = $container.find('.slideshow-nav'),             // d
+            $nav = $container.find('.slideshow-nav'),           // d
             $indicator = $container.find('.slideshow-indicator'), // e
             // スライドショー内の各要素の jQuery オブジェクト
             // a スライドショー全体のコンテナー
