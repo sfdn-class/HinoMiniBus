@@ -57,7 +57,7 @@ h1{
 }
 
 #menu li a:hover {
-    border-bottom: solid 3px #eef7fc;
+    border-bottom: solid 2px rgb(150,150,150);
 }
 
 #map {
