@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<!-- display_marker.html -->
+<html>
+<head>
+    <title>川辺堀之内路線</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0">
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript" src="./bus_kawabe.js"></script>
+    <script type="text/javascript" src="./moyori.js"></script>
+    <link rel="stylesheet" type="text/css" href="bus.css">
+
+</head>
+<body>
+  <div id="header">
+    <h1>みにばす旅</h1>
+    <div id="menu">
+      <ul class = "tabs-nav">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="./bus_sinai.html" target="_self">市内</a></li>
+        <li><a href="./bus_minami.html" target="_self">南平</a></li>
+        <li><a href="./bus_misawadai.html" target="_self">三沢台</a></li>
+        <li><a href="./bus_asahi.html" target="_self">旭が丘</a></li>
+        <li><a href="./bus_otikawa.html" target="_self">落川</a></li>
+        <li><a href="./bus_hirayama.html" target="_self">平山</a></li>
+        <li><a href="./bus_kawabe.html" target="_self">川辺堀之内</a></li>
+        <li><a href="./sankou.html" target="_self">参考文献</a></li>
+      </ul>
+    </div><!--end of menu-->
+  </div><!--end of header-->
+  <div id="map"></div>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <p>日野の景色を楽しむ！</p>
+  <div style="line-height: 0.5em">
+    <p class="mozi1">ゆったりお散歩コース</p>
+  </div>
+  <br>
+
+  <div id="backdesign">
+    <br><br>
+    <p class="mozi2">1.中央図書館下湧水</p>
+    <p><b>東京の名湧水５７選に指定される湧水</b></p>
+    <ul class="content">
+      <li><img src="img/kawabe/Hinotosyowakimizu.jpg" width="400px" height="300px" class="maru"></li>
+      <li class="hide"><img src="img/kawabe/Hinotosyowakimizu2.jpg" width="400px" height="300px" class="maru"></li>
+      <li class="hide"><div class="map" id="map_hinolibrary"></div></li>
+    </ul>
+    <ul class="tab">
+      <li class="select">img1</li>
+      <li style="background:#5882FA">img2</li>
+      <li>MAP</li>
+    </ul>
+    <p>住所：日野市豊田2-49</p>
+    <p>最寄りのバス停：豊田駅南入口　徒歩5分</p>
+    <p>参考サイト(東京都環境局)：<a href="http://www.kankyo.metro.tokyo.jp/water/conservation/spring_water/tokyo/place_33.html">No.33 中央図書館下湧水（日野市）</a></p>
+    <p>最寄りの時刻表：<a href="https://www.navitime.co.jp/diagram/bus/00021628/00006350/0/">豊田駅南入口</a></p>
+    <br><br><br><br>
+  </div>
+
+    <p class="mozi2">2.市営向川団地浅川堤</p>
+    <p><b>大正時代に八王子市北野まで続いていた桜並木</b></p>
+    <ul class="content2">
+      <li><img src="img/kawabe/AsakawaSakura.jpg" width="400px" height="300px" class="maru"></li>
+      <li class="hide"><img src="img/kawabe/AsakawaSakura2.jpg" width="400px" height="300px" class="maru"></li>
+      <li class="hide"><div class="map" id="map_asakawa"></div></li>
+    </ul>
+    <ul class="tab2">
+      <li class="select2">img1</li>
+      <li style="background:#5882FA">img2</li>
+      <li>MAP</li>
+    </ul>
+    <p>住所：〒191-0042 東京都 日野市程久保６丁目</p>
+    <p>連絡先：042-591-1611</p>
+    <p>最寄りのバス停：一番橋西　徒歩3分</p>
+    <p>参考サイト：<a href="http://shinsenhino.com/archives/spot/nature/flower/050328035114.php">http://shinsenhino.com/archives/spot/nature/flower/050328035114.php</a></p>
+    <p>最寄りの時刻表：<a href="https://www.navitime.co.jp/diagram/bus/00021625/00006350/0/">一番橋西</a></p>
+    <br><br>
+
+  <div id="backdesign">
+    <br><br>
+    <p class="mozi2">3.レンガ橋</p>
+    <p><b>豊田用水に架けられた小さなレンガでできた丸橋</b><p>
+      <ul class="content3">
+        <li><img src="img/kawabe/Rengabasi.jpg" width="400px" height="300px" class="maru"></li>
+        <li class="hide"><img src="img/kawabe/Rengabasi.jpg" width="400px" height="300px" class="maru"></li>
+        <li class="hide"><div class="map" id="map_renga"></div></li>
+      </ul>
+      <ul class="tab3">
+        <li class="select3">img1</li>
+        <li style="background:#5882FA">　　</li>
+        <li>MAP</li>
+      </ul>
+    <p>最寄りのバス停：一番橋西　徒歩4分</p>
+    <p>公式サイト：<a href="http://shinsenhino.com/archives/spot/walk/050921212002.php">http://shinsenhino.com/archives/spot/walk/050921212002.php</a></p>
+    <p>最寄りの時刻表：<a href="https://www.navitime.co.jp/diagram/bus/00021625/00006350/0/">一番橋西</a></p>
+    <br><br><br><br>
+  </div>
+
+    <p class="mozi2">4.堀之内緑道</p>
+    <p><b>豊田用水に沿って歩く道</b></p>
+    <ul class="content4">
+      <li><img src="img/kawabe/HorinoutiRyokudou.jpg" width="400px" height="300px" class="maru"></li>
+      <li class="hide"><img src="img/kawabe/HorinoutiRyokudou2.jpg" width="400px" height="300px" class="maru"></li>
+      <li class="hide"><div class="map" id="map_horinouti"></div></li>
+    </ul>
+    <ul class="tab4">
+      <li class="select4">img1</li>
+      <li style="background:#5882FA">img2</li>
+      <li>MAP</li>
+    </ul>
+    <p>最寄りのバス停：堀之内緑道　徒歩2分</p>
+    <p>公式サイト：<a href="http://shinsenhino.com/archives/spot/walk/050731154633.php">http://shinsenhino.com/archives/spot/walk/050731154633.php</a></p>
+    <p>最寄りの時刻表：<a href="https://www.navitime.co.jp/diagram/bus/00021623/00006350/0/">堀之内緑道</a></p>
+    <br><br>
+
+  <div id="backdesign">
+    <br><br>
+    <p class="mozi2">5.日枝神社</p>
+    <p><b>日野市の天然記念物の樹歴３００年以上のムクノキがある神社</b><p>
+      <ul class="content5">
+        <li><img src="img/kawabe/Hiedajinja.jpg" width="400px" height="300px" class="maru"></li>
+        <li class="hide"><img src="img/kawabe/Hiedajinja.jpg" width="400px" height="300px" class="maru"></li>
+        <li class="hide"><div class="map" id="map_hieda"></div></li>
+      </ul>
+      <ul class="tab5">
+        <li class="select5">img1</li>
+        <li style="background:#5882FA">　　</li>
+        <li>MAP</li>
+      </ul>
+    <p>住所：日野市川辺堀之内594</p>
+    <p>最寄りのバス停：日野市民プール　徒歩5分</p>
+    <p>参考サイト：<a href="http://shinsenhino.com/archives/spot/temple/050322012817.php">http://shinsenhino.com/archives/spot/temple/050322012817.php</a></p>
+    <p>最寄りの時刻表：<a href="https://www.navitime.co.jp/diagram/bus/00021622/00006350/0/">日野市民プール</a></p>
+    <br><br><br><br>
+  </div>
+
+  <p class="mozi2">6.ふれあい橋</p>
+  <p><b>富士山のビュースポット</b></p>
+  <ul class="content6">
+    <li><img src="img/kawabe/Hureaibashi.jpg" width="400px" height="300px" class="maru"></li>
+    <li class="hide"><img src="img/kawabe/Hureaibashi2.jpg" width="400px" height="300px" class="maru"></li>
+    <li class="hide"><div class="map" id="map_fureai"></div></li>
+  </ul>
+  <ul class="tab6">
+    <li class="select6">img1</li>
+    <li style="background:#5882FA">img2</li>
+    <li>MAP</li>
+  </ul>
+  <p>最寄りのバス停：高幡橋西　徒歩8分</p>
+  <p>参考サイト(4travel)：<a href="http://4travel.jp/domestic/area/kanto/tokyo/hachioji/akishima/hotplace/11560872/">ふれあい橋 (万願寺歩道橋)</a></p>
+  <p>最寄りの時刻表：<a href="https://www.navitime.co.jp/diagram/bus/00021619/00006350/0/">高幡橋西</a></p>
+  <br><br>
+
+</body>
+
+<footer>
+  <p>Copyright © 2018 GroupA All Rights Reserved.</p>
+</footer>
+</html>

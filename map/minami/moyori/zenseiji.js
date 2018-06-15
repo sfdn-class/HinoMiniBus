@@ -3,9 +3,9 @@ window.addEventListener('load', () => { //登録する関数オブジェクト�
   //地図表示に必要なパラメータを保持するconstオブジェクト
   const mapElement = {
     // 日野キャンパス2号館をの緯度経度を中心にして表示する
-    center: {lat:(35.661707+35.660691)/2, lng:(139.406823+139.407201)/2},
+    center: {lat:(35.663837+35.662657)/2, lng:(139.390100+139.388994)/2},
     // ズームレベル
-    zoom: 18
+    zoom: 17
   };
 
   // 地図の作成
@@ -15,10 +15,10 @@ window.addEventListener('load', () => { //登録する関数オブジェクト�
   // 線の座標の配列を作る
   // 日野キャンパスから豊田駅まで
   const routeCoodinates = [
-    {lat:35.661707, lng:139.406823},//獨地蔵尊
-    {lat:35.661566, lng:139.406723},
-
-    {lat:35.660691, lng:139.407201}//南平一丁目
+    {lat:35.663837, lng:139.390100},//東豊田
+    {lat:35.663115, lng:139.389297},
+    {lat:35.662871, lng:139.389404},
+    {lat:35.662657, lng:139.388994}//善生寺
   ];
 
   // Polylineのパラメータを作る
@@ -38,16 +38,16 @@ window.addEventListener('load', () => { //登録する関数オブジェクト�
 
   const firstMarkerElement = {
     //タイトルをつける
-    title: '獨地蔵尊',
+    title: '善生寺',
     // 1号館の緯度経度
-    position:  {lat:35.661707, lng:139.406823},
+    position: {lat:35.662657, lng:139.388994},
     // どのマップオブジェクトに表示するか
     map: myMap
   };
   // ダイレックスにマーカを表示するためのパラメータ
   const secondMarkerElement = {
-    title: '南平一丁目',
-    position:{lat:35.660691,lng:139.407201},
+    title: '東豊田',
+    position:{lat:35.663837, lng:139.390100},
     map: myMap
   };
 
@@ -63,13 +63,13 @@ window.addEventListener('load', () => { //登録する関数オブジェクト�
 
   // 情報ウィンドウを二つ作成
   const firstInfoWindowElement =
-    {content: '<p>獨地蔵尊</p>'};
+    {content: '<p>善生寺</p>'};
   const firstInfoWindow = new google.maps.InfoWindow(firstInfoWindowElement);
   //配列に追加する
   window.infoWindowArray.push(firstInfoWindow);
   // 2つめのマーカオブジェクトの作成
   const secondInfoWindowElement =
-    {content: '<p>南平一丁目</p>'};
+    {content: '<p>東豊田</p>'};
   const secondInfoWindow = new google.maps.InfoWindow(secondInfoWindowElement);
   // 同様に配列に追加する
   window.infoWindowArray.push(secondInfoWindow)

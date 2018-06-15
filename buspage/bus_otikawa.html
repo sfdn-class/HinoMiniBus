@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<!-- display_marker.html -->
+<html>
+<head>
+    <title>落川路線</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0">
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript" src="./bus_otikawa.js"></script>
+    <script type="text/javascript" src="./moyori.js"></script>
+    <link rel="stylesheet" type="text/css" href="bus.css">
+
+</head>
+<body>
+  <div id="header">
+    <h1>みにばす旅</h1>
+    <div id="menu">
+      <ul class = "tabs-nav">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="./bus_sinai.html" target="_self">市内</a></li>
+        <li><a href="./bus_minami.html" target="_self">南平</a></li>
+        <li><a href="./bus_misawadai.html" target="_self">三沢台</a></li>
+        <li><a href="./bus_asahi.html" target="_self">旭が丘</a></li>
+        <li><a href="./bus_otikawa.html" target="_self">落川</a></li>
+        <li><a href="./bus_hirayama.html" target="_self">平山</a></li>
+        <li><a href="./bus_kawabe.html" target="_self">川辺堀之内</a></li>
+        <li><a href="./sankou.html" target="_self">参考文献</a></li>
+      </ul>
+    </div><!--end of menu-->
+  </div><!--end of header-->
+  <div id="map"></div>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <p>都内で気軽にできる！</p>
+  <div style="line-height: 0.5em">
+    <p class="mozi1">自然体験コース</p>
+  </div>
+  <br>
+
+  <div id="backdesign">
+    <br><br>
+    <p class="mozi2">1.とことこ</p>
+    <p><b>散歩しながら「とことこ」と寄りたくなるお店</b></p>
+    <ul class="content">
+      <li><img src="img/otikawa/tokotoko.jpg" width="400px" height="300px" class="maru"></li>
+      <li class="hide"><img src="img/otikawa/tokotoko2.jpg" width="400px" height="300px" class="maru"></li>
+      <li class="hide"><div class="map" id="map_tokotoko"></div></li>
+    </ul>
+    <ul class="tab">
+      <li class="select">img1</li>
+      <li style="background:#5882FA">img2</li>
+      <li>MAP</li>
+    </ul>
+    <p>住所：〒191-0032 東京都日野市三沢２５２−１</p>
+    <p>連絡先：090-1258-1443</p>
+    <p>営業時間：11:30~14:00、16:30~19:00</p>
+    <p>定休日：土曜日、日曜日、月曜日</p>
+    <p>最寄りのバス停：みさわ保育園北 徒歩1分</p>
+    <p>facebook：<a href="https://ja-jp.facebook.com/%E3%81%A8%E3%81%93%E3%81%A8%E3%81%93-1247291728685880/">とことこ</a></p>
+    <p>最寄りの時刻表：<a href="https://www.navitime.co.jp/diagram/bus/00020055/00006711/0/">みさわ保育園北</a></p>
+    <br><br><br><br>
+  </div>
+
+    <p class="mozi2">2.土方農園</p>
+    <p><b>都内で気軽にブルーベリー狩りを楽しもう</b></p>
+    <ul class="content2">
+      <li><img src="img/otikawa/hijikatanouenn.jpg" width="400px" height="300px" class="maru"></li>
+      <li class="hide"><img src="img/otikawa/hijikatanouenn2.jpg" width="400px" height="300px" class="maru"></li>
+      <li class="hide"><div class="map" id="map_hijikatanouenn"></div></li>
+    </ul>
+    <ul class="tab2">
+      <li class="select2">img1</li>
+      <li style="background:#5882FA">img2</li>
+      <li>MAP</li>
+    </ul>
+    <p>住所：〒191-0022 東京都 日野市大字新井４２５</p>
+    <p>連絡先：042-591-0155</p>
+    <p>営業時間：8:00~17:00</p>
+    <p>定休日：8~9月の日曜日、水曜日、土曜日に営業</p>
+    <p>最寄りのバス停：みさわ保育園北 徒歩1分</p>
+    <p>参考サイト：<a href="https://www.jalan.net/kankou/spt_13212cb3510079163/">https://www.jalan.net/kankou/spt_13212cb3510079163/</a></p>
+    <p>最寄りの時刻表：<a href="https://www.navitime.co.jp/diagram/bus/00020055/00006711/0/">みさわ保育園北</a></p>
+    <br><br>
+
+  <div id="backdesign">
+    <br><br>
+    <p class="mozi2">3.京王百草園</p>
+    <p><b>四季折々の草花に癒される日本庭園</b><p>
+      <ul class="content3">
+        <li><img src="img/otikawa/mogusaenn.png" width="400px" height="300px" class="maru"></li>
+        <li class="hide"><img src="img/otikawa/mogusaenn2.jpg" width="400px" height="300px" class="maru"></li>
+        <li class="hide"><div class="map" id="map_mogusaenn"></div></li>
+      </ul>
+      <ul class="tab3">
+        <li class="select3">img1</li>
+        <li style="background:#5882FA">img2</li>
+        <li>MAP</li>
+      </ul>
+    <p>住所：〒191-0033 東京都日野市百草５６０</p>
+    <p>連絡先：042-591-3478</p>
+    <p>営業時間：9:00～17:00</p>
+    <p>定休日：水曜日</p>
+    <p>最寄りのバス停：百草園駅 徒歩12分</p>
+    <p>備考：大人300円、小人100円</p>
+    <p>公式サイト：<a href="http://www.keio-mogusaen.jp/index.html">http://www.keio-mogusaen.jp/index.html</a></p>
+    <p>最寄りの時刻表：<a href="https://www.navitime.co.jp/diagram/bus/00021167/00006711/1/">百草園駅</a></p>
+    <br><br><br><br>
+  </div>
+
+    <p class="mozi2">4.株式会社　温市</p>
+    <p><b>温りのある食卓と畑の架け橋日野の小さな市場</b></p>
+    <ul class="content4">
+      <li><img src="img/otikawa/nukumoriichi.jpg" width="400px" height="300px" class="maru"></li>
+      <li class="hide"><img src="img/otikawa/nukumoriichi2.jpg" width="400px" height="300px" class="maru"></li>
+      <li class="hide"><div class="map" id="map_nukumoriichi"></div></li>
+    </ul>
+    <ul class="tab4">
+      <li class="select4">img1</li>
+      <li style="background:#5882FA">img2</li>
+      <li>MAP</li>
+    </ul>
+    <p>住所：〒191-0034 東京都日野市落川１１１９−１</p>
+    <p>連絡先：042-599-3813</p>
+    <p>営業時間：13：00~9：00</p>
+    <p>定休日：月曜日、金曜日、土曜日</p>
+    <p>最寄りのバス停：桜ヶ丘車庫 徒歩3分</p>
+    <p>公式サイト：<a href="https://www.nukumoriichi.com/">https://www.nukumoriichi.com/</a></p>
+    <p>最寄りの時刻表：<a href="https://www.navitime.co.jp/diagram/bus/00020371/00006711/0/">桜ヶ丘車庫</a></p>
+    <br><br>
+
+</body>
+
+<footer>
+  <p>Copyright © 2018 GroupA All Rights Reserved.</p>
+</footer>
+</html>

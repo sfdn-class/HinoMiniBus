@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<!-- display_marker.html -->
+<html>
+<head>
+    <title>南平路線</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0">
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript" src="./bus_minami.js"></script>
+    <script type="text/javascript" src="./moyori.js"></script>
+    <link rel="stylesheet" type="text/css" href="bus.css">
+
+</head>
+<body>
+  <div id="header">
+    <h1>みにばす旅</h1>
+    <div id="menu">
+      <ul class = "tabs-nav">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="./bus_sinai.html" target="_self">市内</a></li>
+        <li><a href="./bus_minami.html" target="_self">南平</a></li>
+        <li><a href="./bus_misawadai.html" target="_self">三沢台</a></li>
+        <li><a href="./bus_asahi.html" target="_self">旭が丘</a></li>
+        <li><a href="./bus_otikawa.html" target="_self">落川</a></li>
+        <li><a href="./bus_hirayama.html" target="_self">平山</a></li>
+        <li><a href="./bus_kawabe.html" target="_self">川辺堀之内</a></li>
+        <li><a href="./sankou.html" target="_self">参考文献</a></li>
+      </ul>
+    </div><!--end of menu-->
+  </div><!--end of header-->
+  <div id="map"></div>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <p>日心も体も癒される！</p>
+  <div style="line-height: 0.5em">
+    <p class="mozi1">パワースポットコース</p>
+  </div>
+  <br>
+
+  <div id="backdesign">
+    <br><br>
+    <p class="mozi2">1.若宮神社</p>
+    <p><b>祭りや初詣で賑わう地域に大切にされている神社</b></p>
+    <ul class="content">
+      <li><img src="img/minami/Wakamiya.jpg" width="400px" height="300px" class="maru"></li>
+      <li class="hide"><img src="img/minami/WakamiyaMikoshi.jpg" width="400px" height="300px" class="maru"></li>
+      <li class="hide"><div class="map" id="map_wakamiya"></div></li>
+    </ul>
+    <ul class="tab">
+      <li class="select">img1</li>
+      <li style="background:#5882FA">img2</li>
+      <li>MAP</li>
+    </ul>
+    <p>住所：〒191-0052 東京都日野市東豊田２丁目３２−５</p>
+    <p>連絡先：042-584-4656</p>
+    <p>最寄りのバス停：東豊田 徒歩3分</p>
+    <p>参考サイト：<a href="http://shinsenhino.com/archives/spot/temple/050322014020.php">http://shinsenhino.com/archives/spot/temple/050322014020.php</a></p>
+    <p>最寄りの時刻表：<a href="https://www.navitime.co.jp/diagram/bus/00021024/00006337/1/">東豊田</a></p>
+    <br><br><br><br>
+  </div>
+
+    <p class="mozi2">2.善生寺</p>
+    <p><b>青銅製の大仏さまのあるお寺</b></p>
+    <ul class="content2">
+      <li><img src="img/minami/Zenseiji.jpg" width="400px" height="300px" class="maru"></li>
+      <li class="hide"><img src="img/minami/Zenseiji2.jpg" width="400px" height="300px" class="maru"></li>
+      <li class="hide"><div class="map" id="map_zenseiji"></div></li>
+    </ul>
+    <ul class="tab2">
+      <li class="select2">img1</li>
+      <li style="background:#5882FA">img2</li>
+      <li>MAP</li>
+    </ul>
+    <p>住所：〒191-0052 東京都日野市東豊田２丁目２６−３</p>
+    <p>連絡先：042-581-2862</p>
+    <p>最寄りのバス停：東豊田 徒歩1分</p>
+    <p>参考サイト：<a href="http://shinsenhino.com/archives/spot/temple/050322015504.php">http://shinsenhino.com/archives/spot/temple/050322015504.php</a></p>
+    <p>最寄りの時刻表：<a href="https://www.navitime.co.jp/diagram/bus/00021024/00006337/1/">東豊田</a></p>
+    <br><br>
+
+  <div id="backdesign">
+    <br><br>
+    <p class="mozi2">3.熊野神社</p>
+    <p><b>養蚕が盛んだった村の姿が浮かばれる小さな祠が祀られている神社</b><p>
+      <ul class="content3">
+        <li><img src="img/minami/Kumano.jpg" width="400px" height="300px" class="maru"></li>
+        <li class="hide"><img src="img/minami/KumanoHokora.jpg" width="400px" height="300px" class="maru"></li>
+        <li class="hide"><div class="map" id="map_kumano"></div></li>
+      </ul>
+      <ul class="tab3">
+        <li class="select3">img1</li>
+        <li style="background:#5882FA">img2</li>
+        <li>MAP</li>
+      </ul>
+    <p>住所：日野市南平8-11-19</p>
+    <p>最寄りのバス停：南平台 徒歩3分</p>
+    <p>参考サイト：<a href="http://shinsenhino.com/archives/spot/temple/050322013135.php">http://shinsenhino.com/archives/spot/temple/050322013135.php</a></p>
+    <p>最寄りの時刻表：<a href="https://www.navitime.co.jp/diagram/bus/00021073/00006337/1/">南平台</a></p>
+    <br><br><br><br>
+  </div>
+
+    <p class="mozi2">4.壽徳寺</p>
+    <p><b>平家の一族がに発願して開いたお寺</b></p>
+    <ul class="content4">
+      <li><img src="img/minami/Jutokuji.jpg" width="400px" height="300px" class="maru"></li>
+      <li class="hide"><img src="img/minami/Jutokuji.jpg" width="400px" height="300px" class="maru"></li>
+      <li class="hide"><div class="map" id="map_jutoku"></div></li>
+    </ul>
+    <ul class="tab4">
+      <li class="select4">img1</li>
+      <li style="background:#5882FA">　　</li>
+      <li>MAP</li>
+    </ul>
+    <p>住所：日野市南平4-１1-１0</p>
+    <p>連絡先：042-591-0660</p>
+    <p>最寄りのバス停：北野街道口 徒歩7分</p>
+    <p>参考サイト：<a href="http://shinsenhino.com/archives/spot/temple/050322014923.php">http://shinsenhino.com/archives/spot/temple/050322014923.php</a></p>
+    <p>最寄りの時刻表：<a href="https://www.navitime.co.jp/diagram/bus/00021312/00006337/1/">北野街道口</a></p>
+    <br><br>
+
+  <div id="backdesign">
+    <br><br>
+    <p class="mozi2">5.獨地蔵尊</p>
+    <p><b>今もなお信仰される正徳２年（1711）建立された地蔵尊</b><p>
+      <ul class="content5">
+        <li><img src="img/minami/Jizouson.jpg" width="400px" height="300px" class="maru"></li>
+        <li class="hide"><img src="img/minami/Jizouson.jpg" width="400px" height="300px" class="maru"></li>
+        <li class="hide"><div class="map" id="map_jizouson"></div></li>
+      </ul>
+      <ul class="tab5">
+        <li class="select5">img1</li>
+        <li style="background:#5882FA">　　</li>
+        <li>MAP</li>
+      </ul>
+    <p>住所：〒191-0041 東京都日野市南平１丁目３５−１４</p>
+    <p>最寄りのバス停：南平一丁目 徒歩2分</p>
+    <p>最寄りの時刻表：<a href="https://www.navitime.co.jp/diagram/bus/00021072/00006337/1/">南平一丁目</a></p>
+    <br><br><br><br>
+  </div>
+
+</body>
+
+<footer>
+  <p>Copyright © 2018 GroupA All Rights Reserved.</p>
+</footer>
+</html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<!-- display_marker.html -->
+<html>
+<head>
+    <title>Google Maps API最初の一歩</title>
+    <meta charset="utf-8">
+
+    <!-- ちゃんと等倍で表示しましょうよ．スマホ側で勝手に倍率変えんなよ，という意味 -->
+    <meta name="viewport" content="initial-scale=1.0">
+    <!-- この中身は後からJavaScriptでも変更可能だったりする -->
+
+    <!-- Google Maps APIをWeb上から読んでくる -->
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <!-- 自分で作ったJSファイル    <script type="text/javascript" src="./hinobusMenu.js"></script> -->
+    <script type="text/javascript" src="./index.js"></script>
+
+
+<script src="./js/vendor/modernizr.custom.min.js"></script>
+<script src="./js/vendor/jquery-1.10.2.min.js"></script>
+<script src="./js/vendor/jquery-ui-1.10.3.custom.min.js"></script>
+    <script type="text/javascript" src="./js/index.js"></script>
+    <!-- とりあえずCSSを直接書いてしまう -->
+    <link rel="stylesheet" type="text/css" href="./hinoMiniBus.css">
+</head>
+
+<body>
+  <div id="header">
+    <h1>みにばす旅</h1>
+    <div id="menu">
+      <ul class = "tabs-nav">
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="buspage/bus_sinai.html" target="_self">市内</a></li>
+        <li><a href="buspage/bus_minami.html" target="_self">南平</a></li>
+        <li><a href="buspage/bus_misawadai.html" target="_self">三沢台</a></li>
+        <li><a href="buspage/bus_asahi.html" target="_self">旭が丘</a></li>
+        <li><a href="buspage/bus_otikawa.html" target="_self">落川</a></li>
+        <li><a href="buspage/bus_hirayama.html" target="_self">平山</a></li>
+        <li><a href="buspage/bus_kawabe.html" target="_self">川辺堀之内</a></li>
+        <li><a href="buspage/sankou.html" target="_self">参考文献</a></li>
+      </ul>
+    </div><!--end of menu-->
+  </div><!--end of header-->
+  <div id="mainContant">
+
+    <div class="slideshow">
+      <div class="slideshow-slides">
+      <img class="slide" id="slide-1" src="./img/slide1.png" alt="" >
+        <img class="slide" id="slide-2" src="./img/slide2.png" alt="" >
+        <img class="slide" id="slide-3" src="./img/slide3.png" alt="" >
+        <img class="slide" id="slide-4" src="./img/slide4.png" alt="">
+
+<!-- width="1600" height="465"-->
+      </div>
+
+      <div class="slideshow-nav">
+          <a href="#" class="prev">Prev</a>
+          <a href="#" class="next">Next</a>
+      </div>
+      <div class="slideshow-indicator"></div>
+    </div>
+
+    <p>「日野市」をご存知でしょうか。<br>「日野市」は東京都のほぼ中央に位置する緑豊かな場所です。<br>かつては宿場町として栄え、また新選組のゆかりの地としても知られています。</p>
+    <p>そんな見どころたっぷりな「日野市」をめぐるのにぴったりなのが「ミニバス」です。<br>バスに揺られてのんびり旅をすれば、<br>普段なら見過ごしてしまう素敵な出会いや発見があるかも。</p>
+    <p>さあ、あなたもミニバスで旅に出てみましょう。</p>
+  <div id="theam" class = "blue">
+    <!--<img src="./img/hinotop.png">-->
+    <div class ="blueContant" id="theamContant">
+      <ul class = "theam">
+        <li ><img src = "./img/theam_01.png"></li>
+        <li class = "downup">
+          <img src = "./img/theam_02.png">
+          <dl class="caption">
+            <dt>市内</dt>
+            <dd><a href="buspage/bus_sinai.html" target="_self">詳しく見る</a></dd>
+          </dl>
+        </li>
+        <li class = "downup">
+          <img src = "./img/theam_03.png">
+          <dl class="caption">
+            <dt>南平</dt>
+            <dd><a href="buspage/bus_minami.html" target="_self">詳しく見る</a></dd>
+          </dl>
+        </li>
+        <li class = "downup">
+          <img src = "./img/theam_04.png">
+          <dl class="caption">
+            <dt>三沢台</dt>
+            <dd><a href="buspage/bus_misawadai.html" target="_self">詳しく見る</a></dd>
+          </dl>
+        </li>
+        <li class = "downup">
+            <img src = "./img/theam_05.png">
+            <dl class="caption">
+              <dt>旭ヶ丘</dt>
+              <dd><a href="buspage/bus_asahi.html" target="_self">詳しく見る</a></dd>
+            </dl>
+          </li>
+        <li class = "downup">
+          <img src = "./img/theam_06.png">
+          <dl class="caption">
+            <dt>落川</dt>
+            <dd><a href="buspage/bus_otikawa.html" target="_self">詳しく見る</a></dd>
+          </dl>
+        </li>
+        <li class = "downup">
+          <img src = "./img/theam_07.png">
+          <dl class="caption">
+            <dt>平山</dt>
+            <dd><a href="buspage/bus_hirayama.html" target="_self">詳しく見る</a></dd>
+          </dl>
+        </li>
+        <li class = "downup">
+          <img src = "./img/theam_08.png">
+          <dl class="caption">
+            <dt>川辺堀之内</dt>
+            <dd><a href="buspage/bus_kawabei.html" target="_self">詳しく見る</a></dd>
+          </dl>
+        </li>
+      </ul>
+
+    </div><!--end of blueContant-->
+    <!--<img src="./img/hinobottom.png">-->
+  </div><!--end of theam & blue-->
+
+  <div id="departure" class="white">
+    <h2>出発駅</h2>
+    <h3>で選ぶ</h3>
+    <div id="departureContant">
+      <table border="0">
+        <tr>
+            <th>豊田</th><td><a href="buspage/bus_sinai.html" target="_self">市内　/ </a><a href="buspage/bus_asahi.html" target="_self">旭が丘 / </a><a href="buspage/bus_hirayama.html" target="_self">平山 / </a><a href="buspage/bus_kawabe.html" target="_self">川辺堀之内</a></td>
+        </tr>
+        <tr>
+          <th>聖蹟桜ヶ丘</th><td><a href= "misawadai.html" target="_self">三沢台 / </a><a href= "buspage/bus_otikawa.html" target="_self">落川</a></td>
+        </tr>
+        <tr>
+          <th>高幡不動尊</th><td><a href = "buspage/bus_sinai.html" target="_self">市内 / </a><a href = "buspage/bus_minami.html" target="_self">南平 / </a><a href = "buspage/bus_misawadai.html" target="_self">三沢台 / </a><a href = "buspage/bus_otikawa.html" target="_self">落川 / </a>
+        <a href = "buspage/bus_/kawabe.html" target="_self">川辺堀之内 / </a></td>
+        </tr>
+      </table>
+
+    </div><!--end of departure&white-->
+  </div><!--end of departureContant-->
+</div><!--end of main_contant-->
+<div id="footer">
+  <p>Copyright © 2018 GroupA All Rights Reserved.</p>
+</div><!--end of footer-->
+</body>
+</html>
