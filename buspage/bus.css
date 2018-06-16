@@ -1,4 +1,4 @@
-//各路線ページのcss
+/*各路線ページのcss*/
 
 html, body {
     font-family: "游明朝体","YuMincho";
@@ -25,6 +25,7 @@ img{
 }
 
 h1{
+    font-family: "游明朝体","YuMincho";
   font-weight: normal;
 }
 
@@ -87,16 +88,21 @@ h1{
 }
 
 .mapContents .slideRight p{
+  line-height: 2;
   text-align: left;
   padding:5%;
+  color: #ffffff;
 }
+
 .mapContents .slideRight h1{
   text-align: left;
-  padding:5%;
+  padding:2% 5%;
+  color: #ffffff;
 }
+
 .mapContents:hover .slideRight{
    opacity: 0.8;
-  background-color: #EEF6F9;
+  background-color: #9dd2e7;
 }
 
 #map {
