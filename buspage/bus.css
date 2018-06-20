@@ -1,13 +1,14 @@
 /*各路線ページのcss*/
 
 html, body {
-    font-family: "游明朝体","YuMincho";
+
     height: 100%;
     margin: auto;
-    font-family: Meiryo;
+    font-family: "Meiryo";
 }
 
 p{
+
   text-align:center;
 }
 
@@ -25,17 +26,21 @@ img{
 }
 
 h1{
-    font-family: "游明朝体","YuMincho";
   font-weight: normal;
 }
-
+#header h1{
+  font-family: "游明朝体","YuMincho",serif;
+  font-weight: normal;
+}
 #header {
   left:10%;
   width:90%;
   margin: auto;
   display:flex;
 }
-
+footer p{
+  font-family: "游明朝体","YuMincho",serif;
+}
 #menu ul {
   position: relative;
   display: flex;
