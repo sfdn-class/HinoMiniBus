@@ -1,13 +1,14 @@
-//各路線ページのcss
+/*各路線ページのcss*/
 
 html, body {
-    font-family: "游明朝体","YuMincho";
+
     height: 100%;
     margin: auto;
-    font-family: Meiryo;
+    font-family: "Meiryo";
 }
 
 p{
+
   text-align:center;
 }
 
@@ -27,14 +28,19 @@ img{
 h1{
   font-weight: normal;
 }
-
+#header h1{
+  font-family: "游明朝体","YuMincho",serif;
+  font-weight: normal;
+}
 #header {
   left:10%;
   width:90%;
   margin: auto;
   display:flex;
 }
-
+footer p{
+  font-family: "游明朝体","YuMincho",serif;
+}
 #menu ul {
   position: relative;
   display: flex;
@@ -57,14 +63,60 @@ h1{
 }
 
 #menu li a:hover {
-    border-bottom: solid 3px #eef7fc;
+    border-bottom: solid 2px rgb(150,150,150);
+}
+
+
+.mapContents {
+  position: relative;
+  overflow: hidden;
+  width: 90%;
+  margin: auto;
+}
+
+.mapContents .slideRight {
+   opacity: 0;
+  position: absolute;
+  top: 10px;
+  left: 70%;
+  width: 30%;
+  height:100%;
+  transition: .6s;
+
+}/*入り*/
+
+.mapContents .slideRight::before {
+  transition: transform .3s;
+}
+.mapContents .slideRight:hover::before{
+
+}
+
+.mapContents .slideRight p{
+  line-height: 2;
+  text-align: left;
+  padding:5%;
+  color: #ffffff;
+}
+
+.mapContents .slideRight h1{
+  text-align: left;
+  padding:2% 5%;
+  color: #ffffff;
+}
+
+.mapContents:hover .slideRight{
+   opacity: 0.8;
+  background-color: #9dd2e7;
 }
 
 #map {
     height: 500px;
-    width: 90%;
+    width: 100%;
     top: 10px;
     margin: auto;
+
+    display: block;
 }
 
 #map_hizikata,#map_furusato,#map_satou,#map_hinozyuku,#map_inoue{

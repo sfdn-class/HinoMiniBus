@@ -1,6 +1,6 @@
 html, body {
-  font-family: "游明朝体","YuMincho";
-text-align: center;
+  font-family: "游明朝体","YuMincho",serif;
+  text-align: center;
     height: 100%;
     width:100%;
     margin: 0;
@@ -73,8 +73,10 @@ p{
   margin:1.5%;
 }
 #theam ul li dl {
-  width:100%;
-  height: 100%;
+  left:5%;
+  top: 5%;
+  width:90%;
+  height: 90%;
   margin:0;
 }
 #theam img{
@@ -101,43 +103,66 @@ margin: 0;
 padding: 20px 25px;
 box-sizing: border-box;
 color: #fff;
-background: rgba(100,100,100,.9);
+background: url("./img/theamover-8.png");
+background-repeat: no-repeat;
+background-size: 100% 100%;
 }
 #theam ul dl dt {
-margin-bottom: 0.3em;
+  font-size: 20pt;
+  text-align: center;
+  padding: 30% 0;
+  /*margin-bottom: 0.3em;*/
 }
 #theam ul dl dd {
-margin: 0;
-font-size: 10px;
-line-height: 1.6;
-text-align: justify;
-word-break: break-all;
+  text-decoration: none;
+  margin: 0;
+  line-height: 1.6;
+  text-align: justify;
+  word-break: break-all;
+  position: absolute;
+  right:10%;
+  bottom:5%;
+
 }
+
+#theam ul dl dd a{
+  text-decoration: none;
+  font-size: 10pt;
+  color:#ffffff;
+
+}
+
 #theam ul dl dd:last-of-type {
-margin-top: 10px;
-text-align: right;
-}/* type1 */
+  margin-top: 10px;
+  text-align: right;
+}
+/* type1 */
 .downup dl {
-opacity: 0;
--webkit-transform: translateY(100%);
-transform: translateY(100%);
--webkit-transition: opacity 0.6s, -webkit-transform 0.6s;
-transition: opacity 0.6s, transform 0.6s;
+  opacity: 0;
+  -webkit-transform: translateY(100%);
+  transform: translateY(100%);
+  -webkit-transition: opacity 0.6s, -webkit-transform 0.6s;
+  transition: opacity 0.6s, transform 0.6s;
 }
 .downup:hover dl {
-opacity: 1;
--webkit-transform: translateY(0);
-transform: translateY(0);
+  opacity: 1;
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
 }
 
 
- .blue img{
+.blue{
+  background: url("./img/backdesign.png");
+  background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+ /*.blue img{
    position: relative;
    margin:0;
    padding:0;
    width:100%;
   vertical-align:bottom;
- }
+ }*/
 
 
  .blueContant {
@@ -145,7 +170,7 @@ transform: translateY(0);
    padding-top: 10%;
    padding-bottom: 10%;
    margin: 0;
-   background-color: #eef7fc;
+   /*background-color: #eef7fc;*/
  }
 
 #departureContant {
@@ -182,15 +207,15 @@ transform: translateY(0);
   padding:10px;
 }
 #departureContant table td a{
-text-decoration: none;
-color: black;
+  text-decoration: none;
+  color: black;
 }
 
 .slide img{
   object-fit: cover;
   width:1600px;
   height:500px;
-    overflow: hidden;
+  overflow: hidden;
 }
 .slideshow {
     background-color:rgb(255,255,255);
@@ -199,10 +224,8 @@ color: black;
     position: relative;
 }
 
-
-
 .slideshow-slides {
-    height: 100%;
+    height: 80%;
     position: absolute;
     width: 100%;
     /* left は JavaScript で指定 */
