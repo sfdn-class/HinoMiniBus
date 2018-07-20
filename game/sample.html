@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="utf-8" />
+    <title>P5.jsのCanvasの位置をDivで指定</title>
+
+    <!-- 絶対パス指定でネットから直接ライブラリを読み込む -->
+    <script type="text/javascript"
+               src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.8/p5.js">
+  </script>
+
+    <!-- 自分のP5.jsコードを読み込む -->
+    <script type="text/javascript" src="./adventure_groupa.js">
+    </script>
+  </head>
+  <body>
+    <div id="header">
+      <p>ここはヘッダです</p>
+    </div>
+
+    <!-- DivタグでCanvasの親となる要素を指定 -->
+    <center>
+    <div id="P5Canvas">
+      <p>
+	ここがキャンバスになるdivです．
+      </p>
+    </div>
+  </center>
+
+
+    <div id="footer">
+      <p>
+	ここがフッタです．
+      </p>
+    </div>
+
+  </body>
+</html>
