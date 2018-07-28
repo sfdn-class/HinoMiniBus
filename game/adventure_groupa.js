@@ -2438,6 +2438,9 @@ function mousePressed() { // マウスをクリックしたら(右クリック�
   else if(mouseX>456&&mouseX<583&&mouseY>162&&mouseY<270&&window.sceneNumber==minami2){
   window.sceneNumber=minami_nai;
   }
+  else if(mouseX>441&&mouseX<591&&mouseY>414&&mouseY<444&&window.sceneNumber==minami2){
+  window.sceneNumber=4;
+  }
   //2page
   else if(mouseX>27&&mouseX<155&&mouseY>30&&mouseY<137&&window.sceneNumber==minami3){
   window.sceneNumber=minami_nai;
@@ -2462,6 +2465,9 @@ function mousePressed() { // マウスをクリックしたら(右クリック�
   }
   else if(mouseX>456&&mouseX<583&&mouseY>162&&mouseY<270&&window.sceneNumber==minami3){
   window.sceneNumber=minami_nai;
+  }
+  else if(mouseX>441&&mouseX<591&&mouseY>414&&mouseY<444&&window.sceneNumber==minami3){
+  window.sceneNumber=4;
   }
   //3page
   else if(mouseX>27&&mouseX<155&&mouseY>30&&mouseY<137&&window.sceneNumber==minami4){
@@ -2488,6 +2494,9 @@ function mousePressed() { // マウスをクリックしたら(右クリック�
   else if(mouseX>456&&mouseX<583&&mouseY>162&&mouseY<270&&window.sceneNumber==minami4){
   window.sceneNumber=minami_nai;
   }
+  else if(mouseX>441&&mouseX<591&&mouseY>414&&mouseY<444&&window.sceneNumber==minami4){
+  window.sceneNumber=4;
+  }
   //4page
   else if(mouseX>27&&mouseX<155&&mouseY>30&&mouseY<137&&window.sceneNumber==minami5){
   window.sceneNumber=minami_nai;
@@ -2500,6 +2509,9 @@ function mousePressed() { // マウスをクリックしたら(右クリック�
   }
   else if(mouseX>456&&mouseX<583&&mouseY>30&&mouseY<137&&window.sceneNumber==minami5){
   window.sceneNumber=minami_nai;
+  }
+  else if(mouseX>441&&mouseX<591&&mouseY>414&&mouseY<444&&window.sceneNumber==minami5){
+  window.sceneNumber=4;
   }
   //未開拓ページ
   else if(mouseX>90&&mouseX<290&&mouseY>224&&mouseY<254&&window.sceneNumber==minami_nai){
@@ -2623,6 +2635,9 @@ function mousePressed() { // マウスをクリックしたら(右クリック�
   else if(mouseX>456&&mouseX<583&&mouseY>162&&mouseY<270&&window.sceneNumber==hirayama2){
   window.sceneNumber=hirayama0;
   }
+  else if(mouseX>441&&mouseX<591&&mouseY>414&&mouseY<444&&window.sceneNumber==hirayama2){
+  window.sceneNumber=4;
+  }
   //2page
   else if(mouseX>27&&mouseX<155&&mouseY>30&&mouseY<137&&window.sceneNumber==hirayama3){
   window.sceneNumber=hirayama0;
@@ -2648,6 +2663,9 @@ function mousePressed() { // マウスをクリックしたら(右クリック�
   else if(mouseX>456&&mouseX<583&&mouseY>162&&mouseY<270&&window.sceneNumber==hirayama3){
   window.sceneNumber=hirayama0;
   }
+  else if(mouseX>441&&mouseX<591&&mouseY>414&&mouseY<444&&window.sceneNumber==hirayama3){
+  window.sceneNumber=4;
+  }
   //3page
   else if(mouseX>27&&mouseX<155&&mouseY>30&&mouseY<137&&window.sceneNumber==hirayama4){
   window.sceneNumber=hirayama_tyoume1;
@@ -2672,6 +2690,9 @@ function mousePressed() { // マウスをクリックしたら(右クリック�
   }
   else if(mouseX>456&&mouseX<583&&mouseY>162&&mouseY<270&&window.sceneNumber==hirayama4){
   window.sceneNumber=hirayama0;
+  }
+  else if(mouseX>441&&mouseX<591&&mouseY>414&&mouseY<444&&window.sceneNumber==hirayama4){
+  window.sceneNumber=4;
   }
   //未開拓ページ
   else if(mouseX>90&&mouseX<290&&mouseY>224&&mouseY<254&&window.sceneNumber==hirayama0){
@@ -2778,6 +2799,9 @@ function mousePressed() { // マウスをクリックしたら(右クリック�
   else if(mouseX>456&&mouseX<583&&mouseY>162&&mouseY<270&&window.sceneNumber==kawabe2){
   window.sceneNumber=kawabe_hori1;
   }
+  else if(mouseX>441&&mouseX<591&&mouseY>414&&mouseY<444&&window.sceneNumber==kawabe2){
+  window.sceneNumber=4;
+  }
   //2page
   else if(mouseX>27&&mouseX<155&&mouseY>30&&mouseY<137&&window.sceneNumber==kawabe3){
   window.sceneNumber=kawabe_hino1;
@@ -2796,6 +2820,9 @@ function mousePressed() { // マウスをクリックしたら(右クリック�
   }
   else if(mouseX>163&&mouseX<292&&mouseY>162&&mouseY<270&&window.sceneNumber==kawabe3){
   window.sceneNumber=kawabe_nai;
+  }
+  else if(mouseX>441&&mouseX<591&&mouseY>414&&mouseY<444&&window.sceneNumber==kawabe3){
+  window.sceneNumber=4;
   }
   //未開拓ページ
   else if(mouseX>90&&mouseX<290&&mouseY>224&&mouseY<254&&window.sceneNumber==kawabe_nai){
