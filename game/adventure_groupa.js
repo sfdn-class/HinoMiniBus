@@ -5,6 +5,8 @@ var gazou0;
 var gazou1;
 var gazou2;
 var gazou3;
+var gazou4;
+var gazou5;
 //市内路線------------------------
 var sinai_sentaku;
 var sinai_modoru;
@@ -28,6 +30,28 @@ var sinai_mangan1;
 var sinai_mangan2;
 //南平路線---------------------------
 var minami1;
+var minami2;
+var minami3;
+var minami4;
+var minami5;
+var minami_sentaku;
+var minami_modoru;
+var minami_nai;
+var minami_higasi1;
+var minami_higasi2;
+var minami_higasi3;
+var minami_higasi4;
+var minami_higasi5;
+var minami_higasi6;
+var minami_kita1;
+var minami_kita2;
+var minami_kita3;
+var minami_minami1;
+var minami_minami2;
+var minami_minami3;
+var minami_minamidai1;
+var minami_minamidai2;
+var minami_minamidai3;
 //三沢台路線-------------------------
 var misawa1;
 var misawa2;
@@ -83,8 +107,44 @@ var otikawa_hoiku4;
 var otikawa_hoiku5;
 //平山---------------------------------
 var hirayama1;
+var hirayana2;
+var hirayama3;
+var hirayama4;
+var hirayama_sentaku;
+var hirayama_modoru;
+var hirayama0;
+var hirayama_tyoume1;
+var hirayama_tyoume2;
+var hirayama_tyoume3;
+var hirayama_tyoume4;
+var hirayama_tyoume5;
+var hirayama_tyoume6;
+var hirayama_tyoume7;
+var hirayama_tyoume8;
+var hirayama_tyoume9;
+var hirayama_hirayama1;
+var hirayama_hirayama2;
+var hirayama_hirayama3;
 //川辺---------------------------------
 var kawabe1;
+var kawabe2;
+var kawabe3;
+var kawabe_sentaku;
+var kawabe_modoru;
+var kawabe_nai;
+var kawabe_hori1;
+var kawabe_hori2;
+var kawabe_hori3;
+var kawabe_hino1;
+var kawabe_hino2;
+var kawabe_hino3;
+var kawabe_itiban1;
+var kawabe_itiban2;
+var kawabe_itiban3;
+var kawabe_itiban4;
+var kawabe_itiban5;
+var kawabe_itiban6;
+
 
 function setup(){
     //size(640, 480);に相当する
@@ -96,6 +156,8 @@ function setup(){
     gazou1=loadImage("game/kyotsu/prologue.png");
     gazou2=loadImage("game/kyotsu/bus_select.png");
     gazou3=loadImage("game/kyotsu/game2.png");
+    gazou4=loadImage("game/kyotsu/saigo.png");
+    gazou5=loadImage("game/kyotsu/saigo2.png");
     //modoru-sentaku-nai---------------------------------------------------
     sinai_sentaku=loadImage("game/kyotsu/game_zyouhou.png");
     sinai_modoru=loadImage("game/kyotsu/bus_modoru.png");
@@ -109,6 +171,15 @@ function setup(){
     misawa_sentaku=loadImage("game/kyotsu/game_zyouhou.png");
     misawa_modoru=loadImage("game/kyotsu/bus_modoru.png");
     misawa_nai=loadImage("game/kyotsu/game5.png");
+    minami_sentaku=loadImage("game/kyotsu/game_zyouhou.png");
+    minami_modoru=loadImage("game/kyotsu/bus_modoru.png");
+    minami_nai=loadImage("game/kyotsu/game5.png");
+    hirayama_sentaku=loadImage("game/kyotsu/game_zyouhou.png");
+    hirayama_modoru=loadImage("game/kyotsu/bus_modoru.png");
+    hirayama0=loadImage("game/kyotsu/game5.png");
+    kawabe_sentaku=loadImage("game/kyotsu/game_zyouhou.png");
+    kawabe_modoru=loadImage("game/kyotsu/bus_modoru.png");
+    kawabe_nai=loadImage("game/kyotsu/game5.png");
     //市内--------------------------------------------------------------
     sinai1=loadImage("game/sinai/1.png");
     sinai2=loadImage("game/sinai/sinai1.png");
@@ -128,7 +199,26 @@ function setup(){
     sinai_mangan1=loadImage("game/sinai/manngannjieki1.png")
     sinai_mangan2=loadImage("game/sinai/manngannjieki2.png")
     //南平--------------------------------------------------------------------
-    minami1=loadImage("game/仮/minami1.jpg");
+    minami1=loadImage("game/minami/1.png");
+    minami2=loadImage("game/minami/minamidaira1.png");
+    minami3=loadImage("game/minami/minamidaira2.png");
+    minami4=loadImage("game/minami/minamidaira3.png");
+    minami5=loadImage("game/minami/minamidaira4.png");
+    minami_higasi1=loadImage("game/minami/higashitoyoda1_1.png");
+    minami_higasi2=loadImage("game/minami/higashitoyoda1_2.png");
+    minami_higasi3=loadImage("game/minami/higashitoyoda1_3.png");
+    minami_higasi4=loadImage("game/minami/higashitoyoda2_1.png");
+    minami_higasi5=loadImage("game/minami/higashitoyoda2_2.png");
+    minami_higasi6=loadImage("game/minami/higashitoyoda2_3.png");
+    minami_kita1=loadImage("game/minami/kitanokaidou1.png");
+    minami_kita2=loadImage("game/minami/kitanokaidou2.png");
+    minami_kita3=loadImage("game/minami/kitanokaidou3.png");
+    minami_minami1=loadImage("game/minami/minamidaira1tyoume1.png");
+    minami_minami2=loadImage("game/minami/minamidaira1tyoume2.png");
+    minami_minami3=loadImage("game/minami/minamidaira1tyoume3.png");
+    minami_minamidai1=loadImage("game/minami/minamidairadai1.png");
+    minami_minamidai2=loadImage("game/minami/minamidairadai2.png");
+    minami_minamidai3=loadImage("game/minami/minamidairadai3.png");
     //三沢台------------------------------------------------------------------
     misawa1=loadImage("game/misawa/1.png");
     misawa2=loadImage("game/misawa/misawa1.png");
@@ -174,9 +264,39 @@ function setup(){
     otikawa_hoiku4=loadImage("game/otikawa/misawahoikuennkita3.png");
     otikawa_hoiku5=loadImage("game/otikawa/misawahoikuennkita4.png");
     //平山-----------------------------------------------------------------------
-    hirayama1=loadImage("game/仮/hirayama1.jpg");
+    hirayama1=loadImage("game/hirayama/1.png");
+    hirayama2=loadImage("game/hirayama/hirayama1.png");
+    hirayama3=loadImage("game/hirayama/hirayama2.png");
+    hirayama4=loadImage("game/hirayama/hirayama3.png");
+    hirayama_tyoume1=loadImage("game/hirayama/hirayama1tyoume1_1.png");
+    hirayama_tyoume2=loadImage("game/hirayama/hirayama1tyoume1_2.png");
+    hirayama_tyoume3=loadImage("game/hirayama/hirayama1tyoume1_3.png");
+    hirayama_tyoume4=loadImage("game/hirayama/hirayama1tyoume2_1.png");
+    hirayama_tyoume5=loadImage("game/hirayama/hirayama1tyoume2_2.png");
+    hirayama_tyoume6=loadImage("game/hirayama/hirayama1tyoume2_3.png");
+    hirayama_tyoume7=loadImage("game/hirayama/hirayama1tyoume3_1.png");
+    hirayama_tyoume8=loadImage("game/hirayama/hirayama1tyoume3_2.png");
+    hirayama_tyoume9=loadImage("game/hirayama/hirayama1tyoume3_3.png");
+    hirayama_hirayama1=loadImage("game/hirayama/hirayamakenkosiminsiensenta1.png");
+    hirayama_hirayama2=loadImage("game/hirayama/hirayamakenkosiminsiensenta2.png");
+    hirayama_hirayama3=loadImage("game/hirayama/hirayamakenkosiminsiensenta3.png");
     //川辺----------------------------------------------------------------------
-    kawabe1=loadImage("game/仮/kawabe1.jpg");
+    kawabe1=loadImage("game/kawabe/1.png");
+    kawabe2=loadImage("game/kawabe/kawabe1.png");
+    kawabe3=loadImage("game/kawabe/kawabe2.png");
+    kawabe_hori1=loadImage("game/kawabe/horinouchiryokudou1.png");
+    kawabe_hori2=loadImage("game/kawabe/horinouchiryokudou2.png");
+    kawabe_hori3=loadImage("game/kawabe/horinouchiryokudou3.png");
+    kawabe_hino1=loadImage("game/kawabe/hinosiminpuru1.png");
+    kawabe_hino2=loadImage("game/kawabe/hinosiminpuru2.png");
+    kawabe_hino3=loadImage("game/kawabe/hinosiminpuru3.png");
+    kawabe_itiban1=loadImage("game/kawabe/itibannhashi1_1.png");
+    kawabe_itiban2=loadImage("game/kawabe/itibannhashi1_2.png");
+    kawabe_itiban3=loadImage("game/kawabe/itibannhashi1_3.png");
+    kawabe_itiban4=loadImage("game/kawabe/itibannhashi2_1.png");
+    kawabe_itiban5=loadImage("game/kawabe/itibannhashi2_2.png");
+    kawabe_itiban6=loadImage("game/kawabe/itibannhashi2_3.png");
+
 }
 
 function draw(){
@@ -194,6 +314,13 @@ function draw(){
     //路線選択画面
     drawSceneNumber3();
   }
+  else if(window.sceneNumber==4){
+    drawSceneNumber4();
+  }
+  else if(window.sceneNumber==5){
+    drawSceneNumber5();
+  }
+  //市内-------------------------------------------------------------------------------
   else if(window.sceneNumber == sinai_sentaku){
     //市内路線
     drawSceneNumbersinai_sentaku();
@@ -274,10 +401,100 @@ function draw(){
     //市内路線
     drawSceneNumbersinai_mangan2();
   }
+  //南平-------------------------------------------------------------------------------
+  else if(window.sceneNumber == minami_sentaku){
+    //南平路線
+    drawSceneNumberminami_sentaku();
+  }
+  else if(window.sceneNumber == minami_modoru){
+    //南平路線
+    drawSceneNumberminami_modoru();
+  }
+  else if(window.sceneNumber == minami_nai){
+    //南平路線
+    drawSceneNumberminami_nai();
+  }
   else if(window.sceneNumber == minami1){
     //南平路線
     drawSceneNumberminami1();
   }
+  else if(window.sceneNumber == minami2){
+    //南平路線
+    drawSceneNumberminami2();
+  }
+  else if(window.sceneNumber == minami3){
+    //南平路線
+    drawSceneNumberminami3();
+  }
+  else if(window.sceneNumber == minami4){
+    //南平路線
+    drawSceneNumberminami4();
+  }
+  else if(window.sceneNumber == minami5){
+    //南平路線
+    drawSceneNumberminami5();
+  }
+  else if(window.sceneNumber == minami_higasi1){
+    //南平路線
+    drawSceneNumberminami_higasi1();
+  }
+  else if(window.sceneNumber == minami_higasi2){
+    //南平路線
+    drawSceneNumberminami_higasi2();
+  }
+  else if(window.sceneNumber == minami_higasi3){
+    //南平路線
+    drawSceneNumberminami_higasi3();
+  }
+  else if(window.sceneNumber == minami_higasi4){
+    //南平路線
+    drawSceneNumberminami_higasi4();
+  }
+  else if(window.sceneNumber == minami_higasi5){
+    //南平路線
+    drawSceneNumberminami_higasi5();
+  }
+  else if(window.sceneNumber == minami_higasi6){
+    //南平路線
+    drawSceneNumberminami_higasi6();
+  }
+  else if(window.sceneNumber == minami_kita1){
+    //南平路線
+    drawSceneNumberminami_kita1();
+  }
+  else if(window.sceneNumber == minami_kita2){
+    //南平路線
+    drawSceneNumberminami_kita2();
+  }
+  else if(window.sceneNumber == minami_kita3){
+    //南平路線
+    drawSceneNumberminami_kita3();
+  }
+  else if(window.sceneNumber == minami_minami1){
+    //南平路線
+    drawSceneNumberminami_minami1();
+  }
+  else if(window.sceneNumber == minami_minami2){
+    //南平路線
+    drawSceneNumberminami_minami2();
+  }
+  else if(window.sceneNumber == minami_minami3){
+    //南平路線
+    drawSceneNumberminami_minami3();
+  }
+  else if(window.sceneNumber == minami_minamidai1){
+    //南平路線
+    drawSceneNumberminami_minamidai1();
+  }
+  else if(window.sceneNumber == minami_minamidai2){
+    //南平路線
+    drawSceneNumberminami_minamidai2();
+  }
+  else if(window.sceneNumber == minami_minamidai3){
+    //南平路線
+    drawSceneNumberminami_minamidai3();
+  }
+  //三沢台--------------------------------------------------------------------------------
   else if(window.sceneNumber == misawa_sentaku){
     drawSceneNumbermisawa_sentaku();
   }
@@ -335,6 +552,7 @@ function draw(){
     //三沢台路線
     drawSceneNumbermisawa_takahata2();
   }
+  //旭が丘---------------------------------------------------------------------------------
   else if(window.sceneNumber == asahi1){
     //旭が丘路線
     drawSceneNumberasahi1();
@@ -412,6 +630,7 @@ function draw(){
   else if(window.sceneNumber == asahi_modoru){
     drawSceneNumberasahi_modoru();
   }
+  //落川--------------------------------------------------------------------------------
   else if(window.sceneNumber == otikawa_sentaku){
     drawSceneNumberotikawa_sentaku();
   }
@@ -469,13 +688,155 @@ function draw(){
     //落川路線
     drawSceneNumberotikawa_hoiku5();
   }
+  //平山-------------------------------------------------------------------------------------
   else if(window.sceneNumber == hirayama1){
     //平山路線
     drawSceneNumberhirayama1();
   }
+  else if(window.sceneNumber == hirayama2){
+    //平山路線
+    drawSceneNumberhirayama2();
+  }
+  else if(window.sceneNumber == hirayama3){
+    //平山路線
+    drawSceneNumberhirayama3();
+  }
+  else if(window.sceneNumber == hirayama4){
+    //平山路線
+    drawSceneNumberhirayama4();
+  }
+  else if(window.sceneNumber == hirayama_sentaku){
+    //平山路線
+    drawSceneNumberhirayama_sentaku();
+  }
+  else if(window.sceneNumber == hirayama_modoru){
+    //平山路線
+    drawSceneNumberhirayama_modoru();
+  }
+  else if(window.sceneNumber == hirayama0){
+    //平山路線
+    drawSceneNumberhirayama0();
+  }
+  else if(window.sceneNumber == hirayama_tyoume1){
+    //平山路線
+    drawSceneNumberhirayama_tyoume1();
+  }
+  else if(window.sceneNumber == hirayama_tyoume2){
+    //平山路線
+    drawSceneNumberhirayama_tyoume2();
+  }
+  else if(window.sceneNumber == hirayama_tyoume3){
+    //平山路線
+    drawSceneNumberhirayama_tyoume3();
+  }
+  else if(window.sceneNumber == hirayama_tyoume4){
+    //平山路線
+    drawSceneNumberhirayama_tyoume4();
+  }
+  else if(window.sceneNumber == hirayama_tyoume5){
+    //平山路線
+    drawSceneNumberhirayama_tyoume5();
+  }
+  else if(window.sceneNumber == hirayama_tyoume6){
+    //平山路線
+    drawSceneNumberhirayama_tyoume6();
+  }
+  else if(window.sceneNumber == hirayama_tyoume7){
+    //平山路線
+    drawSceneNumberhirayama_tyoume7();
+  }
+  else if(window.sceneNumber == hirayama_tyoume8){
+    //平山路線
+    drawSceneNumberhirayama_tyoume8();
+  }
+  else if(window.sceneNumber == hirayama_tyoume9){
+    //平山路線
+    drawSceneNumberhirayama_tyoume9();
+  }
+  else if(window.sceneNumber == hirayama_hirayama1){
+    //平山路線
+    drawSceneNumberhirayama_hirayama1();
+  }
+  else if(window.sceneNumber == hirayama_hirayama2){
+    //平山路線
+    drawSceneNumberhirayama_hirayama2();
+  }
+  else if(window.sceneNumber == hirayama_hirayama3){
+    //平山路線
+    drawSceneNumberhirayama_hirayama3();
+  }
+  //川辺---------------------------------------------------------------------------------------
   else if(window.sceneNumber == kawabe1){
     //川辺堀之内路線
     drawSceneNumberkawabe1();
+  }
+  else if(window.sceneNumber == kawabe2){
+    //川辺堀之内路線
+    drawSceneNumberkawabe2();
+  }
+  else if(window.sceneNumber == kawabe3){
+    //川辺堀之内路線
+    drawSceneNumberkawabe3();
+  }
+  else if(window.sceneNumber == kawabe_sentaku){
+    //川辺堀之内路線
+    drawSceneNumberkawabe_sentaku();
+  }
+  else if(window.sceneNumber == kawabe_modoru){
+    //川辺堀之内路線
+    drawSceneNumberkawabe_modoru();
+  }
+  else if(window.sceneNumber == kawabe_nai){
+    //川辺堀之内路線
+    drawSceneNumberkawabe_nai();
+  }
+  else if(window.sceneNumber == kawabe_hori1){
+    //川辺堀之内路線
+    drawSceneNumberkawabe_hori1();
+  }
+  else if(window.sceneNumber == kawabe_hori2){
+    //川辺堀之内路線
+    drawSceneNumberkawabe_hori2();
+  }
+  else if(window.sceneNumber == kawabe_hori3){
+    //川辺堀之内路線
+    drawSceneNumberkawabe_hori3();
+  }
+  else if(window.sceneNumber == kawabe_hino1){
+    //川辺堀之内路線
+    drawSceneNumberkawabe_hino1();
+  }
+  else if(window.sceneNumber == kawabe_hino2){
+    //川辺堀之内路線
+    drawSceneNumberkawabe_hino2();
+  }
+  else if(window.sceneNumber == kawabe_hino3){
+    //川辺堀之内路線
+    drawSceneNumberkawabe_hino3();
+  }
+  else if(window.sceneNumber == kawabe_itiban1){
+    //川辺堀之内路線
+    drawSceneNumberkawabe_itiban1();
+  }
+  else if(window.sceneNumber == kawabe_itiban2){
+    //川辺堀之内路線
+    drawSceneNumberkawabe_itiban2();
+  }
+  else if(window.sceneNumber == kawabe_itiban3){
+    //川辺堀之内路線
+    drawSceneNumberkawabe_itiban3();
+  }
+  else if(window.sceneNumber == kawabe_itiban4){
+    //川辺堀之内路線
+    drawSceneNumberkawabe_itiban4();
+  }
+  else if(window.sceneNumber == kawabe_itiban5){
+    //川辺堀之内路線
+    drawSceneNumberkawabe_itiban5();
+  }
+  else if(window.sceneNumber == kawabe_itiban6){
+    //川辺堀之内路線
+    drawSceneNumberkawabe_itiban6();
   }
 }
 
@@ -505,6 +866,20 @@ function drawSceneNumber3(){
   fill(255, 255, 255, 0);
   rect(0, 0, width, height);
   image(gazou3,0,0);
+}
+
+function drawSceneNumber4(){
+  noStroke();
+  fill(255, 255, 255, 0);
+  rect(0, 0, width, height);
+  image(gazou4,0,0);
+}
+
+function drawSceneNumber5(){
+  noStroke();
+  fill(255, 255, 255, 0);
+  rect(0, 0, width, height);
+  image(gazou5,0,0);
 }
 
 function drawSceneNumbersinai_sentaku(){
@@ -652,6 +1027,160 @@ function drawSceneNumberminami1(){
   fill(255, 255, 255, 0);
   rect(0, 0, width, height);
   image(minami1,0,0);
+}
+
+function drawSceneNumberminami2(){
+  noStroke();
+  fill(255, 255, 255, 0);
+  rect(0, 0, width, height);
+  image(minami2,0,0);
+}
+
+function drawSceneNumberminami3(){
+  noStroke();
+  fill(255, 255, 255, 0);
+  rect(0, 0, width, height);
+  image(minami3,0,0);
+}
+
+function drawSceneNumberminami4(){
+  noStroke();
+  fill(255, 255, 255, 0);
+  rect(0, 0, width, height);
+  image(minami4,0,0);
+}
+
+function drawSceneNumberminami5(){
+  noStroke();
+  fill(255, 255, 255, 0);
+  rect(0, 0, width, height);
+  image(minami5,0,0);
+}
+
+function drawSceneNumberminami_sentaku(){
+  noStroke();
+  fill(255, 255, 255, 0);
+  rect(0, 0, width, height);
+  image(minami_sentaku,0,0);
+}
+
+function drawSceneNumberminami_modoru(){
+  noStroke();
+  fill(255, 255, 255, 0);
+  rect(0, 0, width, height);
+  image(minami_modoru,0,0);
+}
+
+function drawSceneNumberminami_nai(){
+  noStroke();
+  fill(255, 255, 255, 0);
+  rect(0, 0, width, height);
+  image(minami_nai,0,0);
+}
+
+function drawSceneNumberminami_higasi1(){
+  noStroke();
+  fill(255, 255, 255, 0);
+  rect(0, 0, width, height);
+  image(minami_higasi1,0,0);
+}
+
+function drawSceneNumberminami_higasi2(){
+  noStroke();
+  fill(255, 255, 255, 0);
+  rect(0, 0, width, height);
+  image(minami_higasi2,0,0);
+}
+
+function drawSceneNumberminami_higasi3(){
+  noStroke();
+  fill(255, 255, 255, 0);
+  rect(0, 0, width, height);
+  image(minami_higasi3,0,0);
+}
+
+function drawSceneNumberminami_higasi4(){
+  noStroke();
+  fill(255, 255, 255, 0);
+  rect(0, 0, width, height);
+  image(minami_higasi4,0,0);
+}
+
+function drawSceneNumberminami_higasi5(){
+  noStroke();
+  fill(255, 255, 255, 0);
+  rect(0, 0, width, height);
+  image(minami_higasi5,0,0);
+}
+
+function drawSceneNumberminami_higasi6(){
+  noStroke();
+  fill(255, 255, 255, 0);
+  rect(0, 0, width, height);
+  image(minami_higasi6,0,0);
+}
+
+function drawSceneNumberminami_kita1(){
+  noStroke();
+  fill(255, 255, 255, 0);
+  rect(0, 0, width, height);
+  image(minami_kita1,0,0);
+}
+
+function drawSceneNumberminami_kita2(){
+  noStroke();
+  fill(255, 255, 255, 0);
+  rect(0, 0, width, height);
+  image(minami_kita2,0,0);
+}
+
+function drawSceneNumberminami_kita3(){
+  noStroke();
+  fill(255, 255, 255, 0);
+  rect(0, 0, width, height);
+  image(minami_kita3,0,0);
+}
+
+function drawSceneNumberminami_minami1(){
+  noStroke();
+  fill(255, 255, 255, 0);
+  rect(0, 0, width, height);
+  image(minami_minami1,0,0);
+}
+
+function drawSceneNumberminami_minami2(){
+  noStroke();
+  fill(255, 255, 255, 0);
+  rect(0, 0, width, height);
+  image(minami_minami2,0,0);
+}
+
+function drawSceneNumberminami_minami3(){
+  noStroke();
+  fill(255, 255, 255, 0);
+  rect(0, 0, width, height);
+  image(minami_minami3,0,0);
+}
+
+function drawSceneNumberminami_minamidai1(){
+  noStroke();
+  fill(255, 255, 255, 0);
+  rect(0, 0, width, height);
+  image(minami_minamidai1,0,0);
+}
+
+function drawSceneNumberminami_minamidai2(){
+  noStroke();
+  fill(255, 255, 255, 0);
+  rect(0, 0, width, height);
+  image(minami_minamidai2,0,0);
+}
+
+function drawSceneNumberminami_minamidai3(){
+  noStroke();
+  fill(255, 255, 255, 0);
+  rect(0, 0, width, height);
+  image(minami_minamidai3,0,0);
 }
 
 function drawSceneNumbermisawa_sentaku(){
@@ -1004,11 +1533,137 @@ function drawSceneNumberotikawa_mogusa2(){
   image(otikawa_mogusa2,0,0);
 }
 
+function drawSceneNumberhirayama_sentaku(){
+  noStroke();
+  fill(255, 255, 255, 0);
+  rect(0, 0, width, height);
+  image(hirayama_sentaku,0,0);
+}
+
+function drawSceneNumberhirayama_modoru(){
+  noStroke();
+  fill(255, 255, 255, 0);
+  rect(0, 0, width, height);
+  image(hirayama_modoru,0,0);
+}
+
+function drawSceneNumberhirayama0(){
+  noStroke();
+  fill(255, 255, 255, 0);
+  rect(0, 0, width, height);
+  image(hirayama0,0,0);
+}
+
 function drawSceneNumberhirayama1(){
   noStroke();
   fill(255, 255, 255, 0);
   rect(0, 0, width, height);
   image(hirayama1,0,0);
+}
+
+function drawSceneNumberhirayama2(){
+  noStroke();
+  fill(255, 255, 255, 0);
+  rect(0, 0, width, height);
+  image(hirayama2,0,0);
+}
+
+function drawSceneNumberhirayama3(){
+  noStroke();
+  fill(255, 255, 255, 0);
+  rect(0, 0, width, height);
+  image(hirayama3,0,0);
+}
+
+function drawSceneNumberhirayama4(){
+  noStroke();
+  fill(255, 255, 255, 0);
+  rect(0, 0, width, height);
+  image(hirayama4,0,0);
+}
+
+function drawSceneNumberhirayama_tyoume1(){
+  noStroke();
+  fill(255, 255, 255, 0);
+  rect(0, 0, width, height);
+  image(hirayama_tyoume1,0,0);
+}
+
+function drawSceneNumberhirayama_tyoume2(){
+  noStroke();
+  fill(255, 255, 255, 0);
+  rect(0, 0, width, height);
+  image(hirayama_tyoume2,0,0);
+}
+
+function drawSceneNumberhirayama_tyoume3(){
+  noStroke();
+  fill(255, 255, 255, 0);
+  rect(0, 0, width, height);
+  image(hirayama_tyoume3,0,0);
+}
+
+function drawSceneNumberhirayama_tyoume4(){
+  noStroke();
+  fill(255, 255, 255, 0);
+  rect(0, 0, width, height);
+  image(hirayama_tyoume4,0,0);
+}
+
+function drawSceneNumberhirayama_tyoume5(){
+  noStroke();
+  fill(255, 255, 255, 0);
+  rect(0, 0, width, height);
+  image(hirayama_tyoume5,0,0);
+}
+
+function drawSceneNumberhirayama_tyoume6(){
+  noStroke();
+  fill(255, 255, 255, 0);
+  rect(0, 0, width, height);
+  image(hirayama_tyoume6,0,0);
+}
+
+function drawSceneNumberhirayama_tyoume7(){
+  noStroke();
+  fill(255, 255, 255, 0);
+  rect(0, 0, width, height);
+  image(hirayama_tyoume7,0,0);
+}
+
+function drawSceneNumberhirayama_tyoume8(){
+  noStroke();
+  fill(255, 255, 255, 0);
+  rect(0, 0, width, height);
+  image(hirayama_tyoume8,0,0);
+}
+
+function drawSceneNumberhirayama_tyoume9(){
+  noStroke();
+  fill(255, 255, 255, 0);
+  rect(0, 0, width, height);
+  image(hirayama_tyoume9,0,0);
+}
+
+function drawSceneNumberhirayama_hirayama1(){
+  noStroke();
+  fill(255, 255, 255, 0);
+  rect(0, 0, width, height);
+  image(hirayama_hirayama1,0,0);
+}
+
+function drawSceneNumberhirayama_hirayama2(){
+  noStroke();
+  fill(255, 255, 255, 0);
+  rect(0, 0, width, height);
+  image(hirayama_hirayama2,0,0);
+}
+
+function drawSceneNumberhirayama_hirayama3(){
+  noStroke();
+  fill(255, 255, 255, 0);
+  rect(0, 0, width, height);
+  image(hirayama_hirayama3,0,0);
 }
 
 function drawSceneNumberkawabe1(){
@@ -1017,6 +1672,126 @@ function drawSceneNumberkawabe1(){
   rect(0, 0, width, height);
   image(kawabe1,0,0);
 }
+
+function drawSceneNumberkawabe2(){
+  noStroke();
+  fill(255, 255, 255, 0);
+  rect(0, 0, width, height);
+  image(kawabe2,0,0);
+}
+
+function drawSceneNumberkawabe3(){
+  noStroke();
+  fill(255, 255, 255, 0);
+  rect(0, 0, width, height);
+  image(kawabe3,0,0);
+}
+
+function drawSceneNumberkawabe_sentaku(){
+  noStroke();
+  fill(255, 255, 255, 0);
+  rect(0, 0, width, height);
+  image(kawabe_sentaku,0,0);
+}
+
+function drawSceneNumberkawabe_modoru(){
+  noStroke();
+  fill(255, 255, 255, 0);
+  rect(0, 0, width, height);
+  image(kawabe_modoru,0,0);
+}
+
+function drawSceneNumberkawabe_nai(){
+  noStroke();
+  fill(255, 255, 255, 0);
+  rect(0, 0, width, height);
+  image(kawabe_nai,0,0);
+}
+
+function drawSceneNumberkawabe_itiban1(){
+  noStroke();
+  fill(255, 255, 255, 0);
+  rect(0, 0, width, height);
+  image(kawabe_itiban1,0,0);
+}
+
+function drawSceneNumberkawabe_itiban2(){
+  noStroke();
+  fill(255, 255, 255, 0);
+  rect(0, 0, width, height);
+  image(kawabe_itiban2,0,0);
+}
+
+function drawSceneNumberkawabe_itiban3(){
+  noStroke();
+  fill(255, 255, 255, 0);
+  rect(0, 0, width, height);
+  image(kawabe_itiban3,0,0);
+}
+
+function drawSceneNumberkawabe_itiban4(){
+  noStroke();
+  fill(255, 255, 255, 0);
+  rect(0, 0, width, height);
+  image(kawabe_itiban4,0,0);
+}
+
+function drawSceneNumberkawabe_itiban5(){
+  noStroke();
+  fill(255, 255, 255, 0);
+  rect(0, 0, width, height);
+  image(kawabe_itiban5,0,0);
+}
+
+function drawSceneNumberkawabe_itiban6(){
+  noStroke();
+  fill(255, 255, 255, 0);
+  rect(0, 0, width, height);
+  image(kawabe_itiban6,0,0);
+}
+
+function drawSceneNumberkawabe_hori1(){
+  noStroke();
+  fill(255, 255, 255, 0);
+  rect(0, 0, width, height);
+  image(kawabe_hori1,0,0);
+}
+
+function drawSceneNumberkawabe_hori2(){
+  noStroke();
+  fill(255, 255, 255, 0);
+  rect(0, 0, width, height);
+  image(kawabe_hori2,0,0);
+}
+
+function drawSceneNumberkawabe_hori3(){
+  noStroke();
+  fill(255, 255, 255, 0);
+  rect(0, 0, width, height);
+  image(kawabe_hori3,0,0);
+}
+
+function drawSceneNumberkawabe_hino1(){
+  noStroke();
+  fill(255, 255, 255, 0);
+  rect(0, 0, width, height);
+  image(kawabe_hino1,0,0);
+}
+
+function drawSceneNumberkawabe_hino2(){
+  noStroke();
+  fill(255, 255, 255, 0);
+  rect(0, 0, width, height);
+  image(kawabe_hino2,0,0);
+}
+
+function drawSceneNumberkawabe_hino3(){
+  noStroke();
+  fill(255, 255, 255, 0);
+  rect(0, 0, width, height);
+  image(kawabe_hino3,0,0);
+}
+
 
 function mousePressed() { // マウスをクリックしたら(右クリック含む)
   if(mouseX>211&&mouseX<413&&mouseY>263&&mouseY<364&&window.sceneNumber==0){
@@ -1048,6 +1823,12 @@ function mousePressed() { // マウスをクリックしたら(右クリック�
   }
   else if(mouseX>163&&mouseX<292&&mouseY>30&&mouseY<137&&window.sceneNumber==3){
   window.sceneNumber=kawabe1;
+  }
+  else if(mouseX>0&&mouseX<640&&mouseY>0&&mouseY<480&&window.sceneNumber==4){
+    window.sceneNumber=5;
+  }
+  else if(mouseX>0&&mouseX<640&&mouseY>0&&mouseY<480&&window.sceneNumber==5){
+    window.sceneNumber=0;
   }
   //市内路線全体ここから～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～
   //ここから市内のバス停一覧---------------------------------------------------------------------------
@@ -1092,6 +1873,9 @@ function mousePressed() { // マウスをクリックしたら(右クリック�
   else if(mouseX>456&&mouseX<583&&mouseY>162&&mouseY<270&&window.sceneNumber==sinai2){
   window.sceneNumber=sinai_nai;
   }
+  else if(mouseX>441&&mouseX<591&&mouseY>399&&mouseY<429&&window.sceneNumber==sinai2){
+  window.sceneNumber=4;
+  }
   //2page
   else if(mouseX>27&&mouseX<155&&mouseY>30&&mouseY<137&&window.sceneNumber==sinai3){
   window.sceneNumber=sinai_nai;
@@ -1116,6 +1900,9 @@ function mousePressed() { // マウスをクリックしたら(右クリック�
   }
   else if(mouseX>456&&mouseX<583&&mouseY>162&&mouseY<270&&window.sceneNumber==sinai3){
   window.sceneNumber=sinai_nai;
+  }
+  else if(mouseX>441&&mouseX<591&&mouseY>399&&mouseY<429&&window.sceneNumber==sinai3){
+  window.sceneNumber=4;
   }
   //3page
   else if(mouseX>27&&mouseX<155&&mouseY>30&&mouseY<137&&window.sceneNumber==sinai4){
@@ -1142,12 +1929,18 @@ function mousePressed() { // マウスをクリックしたら(右クリック�
   else if(mouseX>456&&mouseX<583&&mouseY>162&&mouseY<270&&window.sceneNumber==sinai4){
   window.sceneNumber=sinai_nai;
   }
+  else if(mouseX>441&&mouseX<591&&mouseY>399&&mouseY<429&&window.sceneNumber==sinai4){
+  window.sceneNumber=4;
+  }
   //4page
   else if(mouseX>27&&mouseX<155&&mouseY>30&&mouseY<137&&window.sceneNumber==sinai5){
   window.sceneNumber=sinai_nai;
   }
   else if(mouseX>163&&mouseX<292&&mouseY>30&&mouseY<137&&window.sceneNumber==sinai5){
   window.sceneNumber=sinai_nai;
+  }
+  else if(mouseX>441&&mouseX<591&&mouseY>399&&mouseY<429&&window.sceneNumber==sinai5){
+  window.sceneNumber=4;
   }
   //未開拓ページ
   else if(mouseX>90&&mouseX<290&&mouseY>224&&mouseY<254&&window.sceneNumber==sinai_nai){
@@ -1249,6 +2042,9 @@ function mousePressed() { // マウスをクリックしたら(右クリック�
   else if(mouseX>456&&mouseX<583&&mouseY>162&&mouseY<270&&window.sceneNumber==otikawa2){
   window.sceneNumber=otikawa_nai;
   }
+  else if(mouseX>441&&mouseX<591&&mouseY>399&&mouseY<429&&window.sceneNumber==otikawa2){
+  window.sceneNumber=4;
+  }
   //2page
   else if(mouseX>27&&mouseX<155&&mouseY>30&&mouseY<137&&window.sceneNumber==otikawa3){
   window.sceneNumber=otikawa_nai;
@@ -1270,6 +2066,9 @@ function mousePressed() { // マウスをクリックしたら(右クリック�
   }
   else if(mouseX>307&&mouseX<435&&mouseY>162&&mouseY<270&&window.sceneNumber==otikawa3){
   window.sceneNumber=otikawa_nai;
+  }
+  else if(mouseX>441&&mouseX<591&&mouseY>399&&mouseY<429&&window.sceneNumber==otikawa3){
+  window.sceneNumber=4;
   }
   //未開拓ページ
   else if(mouseX>90&&mouseX<290&&mouseY>224&&mouseY<254&&window.sceneNumber==otikawa_nai){
@@ -1362,6 +2161,9 @@ function mousePressed() { // マウスをクリックしたら(右クリック�
   else if(mouseX>456&&mouseX<583&&mouseY>162&&mouseY<270&&window.sceneNumber==asahi2){
   window.sceneNumber=asahi_nai;
   }
+  else if(mouseX>441&&mouseX<591&&mouseY>399&&mouseY<429&&window.sceneNumber==asahi2){
+  window.sceneNumber=4;
+  }
   //2page
   else if(mouseX>27&&mouseX<155&&mouseY>30&&mouseY<137&&window.sceneNumber==asahi3){
   window.sceneNumber=asahi_nai;
@@ -1384,9 +2186,15 @@ function mousePressed() { // マウスをクリックしたら(右クリック�
   else if(mouseX>307&&mouseX<435&&mouseY>162&&mouseY<270&&window.sceneNumber==asahi3){
   window.sceneNumber=asahi_nai;
   }
+  else if(mouseX>441&&mouseX<591&&mouseY>399&&mouseY<429&&window.sceneNumber==asahi3){
+  window.sceneNumber=4;
+  }
   //3page
   else if(mouseX>27&&mouseX<155&&mouseY>30&&mouseY<137&&window.sceneNumber==asahi4){
   window.sceneNumber=asahi_nai;
+  }
+  else if(mouseX>441&&mouseX<591&&mouseY>399&&mouseY<429&&window.sceneNumber==asahi4){
+  window.sceneNumber=4;
   }
   //未開拓ページ
   else if(mouseX>90&&mouseX<290&&mouseY>224&&mouseY<254&&window.sceneNumber==asahi_nai){
@@ -1496,6 +2304,9 @@ function mousePressed() { // マウスをクリックしたら(右クリック�
   else if(mouseX>456&&mouseX<583&&mouseY>162&&mouseY<270&&window.sceneNumber==misawa2){
   window.sceneNumber=misawa_nai;
   }
+  else if(mouseX>441&&mouseX<591&&mouseY>399&&mouseY<429&&window.sceneNumber==misawa2){
+  window.sceneNumber=4;
+  }
   //2page
   else if(mouseX>27&&mouseX<155&&mouseY>30&&mouseY<137&&window.sceneNumber==misawa3){
   window.sceneNumber=misawa_nai;
@@ -1518,6 +2329,9 @@ function mousePressed() { // マウスをクリックしたら(右クリック�
   else if(mouseX>307&&mouseX<435&&mouseY>162&&mouseY<270&&window.sceneNumber==misawa3){
   window.sceneNumber=misawa_nai;
   }
+  else if(mouseX>441&&mouseX<591&&mouseY>399&&mouseY<429&&window.sceneNumber==misawa3){
+  window.sceneNumber=4;
+  }
   //3page
   else if(mouseX>27&&mouseX<155&&mouseY>30&&mouseY<137&&window.sceneNumber==misawa4){
   window.sceneNumber=misawa_nai;
@@ -1533,6 +2347,9 @@ function mousePressed() { // マウスをクリックしたら(右クリック�
   }
   else if(mouseX>27&&mouseX<155&&mouseY>162&&mouseY<270&&window.sceneNumber==misawa4){
   window.sceneNumber=misawa_takahata1;
+  }
+  else if(mouseX>441&&mouseX<591&&mouseY>399&&mouseY<429&&window.sceneNumber==misawa4){
+  window.sceneNumber=4;
   }
   //未開拓ページ
   else if(mouseX>90&&mouseX<290&&mouseY>224&&mouseY<254&&window.sceneNumber==misawa_nai){
@@ -1577,5 +2394,474 @@ function mousePressed() { // マウスをクリックしたら(右クリック�
   }
   else if(mouseX>0&&mouseX<640&&mouseY>0&&mouseY<480&&window.sceneNumber==misawa_takahata2){
   window.sceneNumber=misawa_sentaku;
+  }
+  //三沢台全体終わり～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～
+  //バス停----------------------------------------------------------------------------------
+  else if(mouseX>0&&mouseX<640&&mouseY>0&&mouseY<480&&window.sceneNumber==minami1){
+  window.sceneNumber=minami2;
+  }
+  else if(mouseX>441&&mouseX<591&&mouseY>360&&mouseY<389&&window.sceneNumber==minami2){
+  window.sceneNumber=minami3;
+  }
+  else if(mouseX>441&&mouseX<591&&mouseY>360&&mouseY<389&&window.sceneNumber==minami3){
+  window.sceneNumber=minami4;
+  }
+  else if(mouseX>441&&mouseX<591&&mouseY>360&&mouseY<389&&window.sceneNumber==minami4){
+  window.sceneNumber=minami5;
+  }
+  else if(mouseX>441&&mouseX<591&&mouseY>360&&mouseY<389&&window.sceneNumber==minami5){
+  window.sceneNumber=minami2;
+  }
+  //未開拓---------------------------------------------------------------------------------------
+  //1page
+  else if(mouseX>27&&mouseX<155&&mouseY>30&&mouseY<137&&window.sceneNumber==minami2){
+  window.sceneNumber=minami_nai;
+  }
+  else if(mouseX>163&&mouseX<292&&mouseY>30&&mouseY<137&&window.sceneNumber==minami2){
+  window.sceneNumber=minami_nai;
+  }
+  else if(mouseX>307&&mouseX<435&&mouseY>30&&mouseY<137&&window.sceneNumber==minami2){
+  window.sceneNumber=minami_nai;
+  }
+  else if(mouseX>456&&mouseX<583&&mouseY>30&&mouseY<137&&window.sceneNumber==minami2){
+  window.sceneNumber=minami_nai;
+  }
+  else if(mouseX>27&&mouseX<155&&mouseY>162&&mouseY<270&&window.sceneNumber==minami2){
+  window.sceneNumber=minami_nai;
+  }
+  else if(mouseX>163&&mouseX<292&&mouseY>162&&mouseY<270&&window.sceneNumber==minami2){
+  window.sceneNumber=minami_nai;
+  }
+  else if(mouseX>307&&mouseX<435&&mouseY>162&&mouseY<270&&window.sceneNumber==minami2){
+  window.sceneNumber=minami_nai;
+  }
+  else if(mouseX>456&&mouseX<583&&mouseY>162&&mouseY<270&&window.sceneNumber==minami2){
+  window.sceneNumber=minami_nai;
+  }
+  //2page
+  else if(mouseX>27&&mouseX<155&&mouseY>30&&mouseY<137&&window.sceneNumber==minami3){
+  window.sceneNumber=minami_nai;
+  }
+  else if(mouseX>163&&mouseX<292&&mouseY>30&&mouseY<137&&window.sceneNumber==minami3){
+  window.sceneNumber=minami_nai;
+  }
+  else if(mouseX>307&&mouseX<435&&mouseY>30&&mouseY<137&&window.sceneNumber==minami3){
+  window.sceneNumber=minami_nai;
+  }
+  else if(mouseX>456&&mouseX<583&&mouseY>30&&mouseY<137&&window.sceneNumber==minami3){
+  window.sceneNumber=minami_nai;
+  }
+  else if(mouseX>27&&mouseX<155&&mouseY>162&&mouseY<270&&window.sceneNumber==minami3){
+  window.sceneNumber=minami_nai;
+  }
+  else if(mouseX>163&&mouseX<292&&mouseY>162&&mouseY<270&&window.sceneNumber==minami3){
+  window.sceneNumber=minami_nai;
+  }
+  else if(mouseX>307&&mouseX<435&&mouseY>162&&mouseY<270&&window.sceneNumber==minami3){
+  window.sceneNumber=minami_higasi1;
+  }
+  else if(mouseX>456&&mouseX<583&&mouseY>162&&mouseY<270&&window.sceneNumber==minami3){
+  window.sceneNumber=minami_nai;
+  }
+  //3page
+  else if(mouseX>27&&mouseX<155&&mouseY>30&&mouseY<137&&window.sceneNumber==minami4){
+  window.sceneNumber=minami_nai;
+  }
+  else if(mouseX>163&&mouseX<292&&mouseY>30&&mouseY<137&&window.sceneNumber==minami4){
+  window.sceneNumber=minami_nai;
+  }
+  else if(mouseX>307&&mouseX<435&&mouseY>30&&mouseY<137&&window.sceneNumber==minami4){
+  window.sceneNumber=minami_kita1;
+  }
+  else if(mouseX>456&&mouseX<583&&mouseY>30&&mouseY<137&&window.sceneNumber==minami4){
+  window.sceneNumber=minami_nai;
+  }
+  else if(mouseX>27&&mouseX<155&&mouseY>162&&mouseY<270&&window.sceneNumber==minami4){
+  window.sceneNumber=minami_nai;
+  }
+  else if(mouseX>163&&mouseX<292&&mouseY>162&&mouseY<270&&window.sceneNumber==minami4){
+  window.sceneNumber=minami_nai;
+  }
+  else if(mouseX>307&&mouseX<435&&mouseY>162&&mouseY<270&&window.sceneNumber==minami4){
+  window.sceneNumber=minami_minami1;
+  }
+  else if(mouseX>456&&mouseX<583&&mouseY>162&&mouseY<270&&window.sceneNumber==minami4){
+  window.sceneNumber=minami_nai;
+  }
+  //4page
+  else if(mouseX>27&&mouseX<155&&mouseY>30&&mouseY<137&&window.sceneNumber==minami5){
+  window.sceneNumber=minami_nai;
+  }
+  else if(mouseX>163&&mouseX<292&&mouseY>30&&mouseY<137&&window.sceneNumber==minami5){
+  window.sceneNumber=minami_minamidai1;
+  }
+  else if(mouseX>307&&mouseX<435&&mouseY>30&&mouseY<137&&window.sceneNumber==minami5){
+  window.sceneNumber=minami_nai;
+  }
+  else if(mouseX>456&&mouseX<583&&mouseY>30&&mouseY<137&&window.sceneNumber==minami5){
+  window.sceneNumber=minami_nai;
+  }
+  //未開拓ページ
+  else if(mouseX>90&&mouseX<290&&mouseY>224&&mouseY<254&&window.sceneNumber==minami_nai){
+  window.sceneNumber=minami2;
+  }
+  else if(mouseX>320&&mouseX<520&&mouseY>224&&mouseY<254&&window.sceneNumber==minami_nai){
+  window.sceneNumber=minami2;
+  }
+  //情報アリ---------------------------------------------------------------------------------
+  //東豊田
+  else if (mouseX>0&&mouseX<640&&mouseY>0&&mouseY<480&&window.sceneNumber==minami_higasi1) {
+    window.sceneNumber=minami_higasi2;
+  }
+  else if (mouseX>0&&mouseX<640&&mouseY>0&&mouseY<480&&window.sceneNumber==minami_higasi2) {
+    window.sceneNumber=minami_higasi3;
+  }
+  else if (mouseX>90&&mouseX<290&&mouseY>224&&mouseY<254&&window.sceneNumber==minami_higasi3) {
+    window.sceneNumber=minami_higasi4;
+  }
+  else if(mouseX>320&&mouseX<520&&mouseY>224&&mouseY<254&&window.sceneNumber==minami_higasi3){
+  window.sceneNumber=minami_modoru;
+  }
+  else if (mouseX>0&&mouseX<640&&mouseY>0&&mouseY<480&&window.sceneNumber==minami_higasi4) {
+    window.sceneNumber=minami_higasi5;
+  }
+  else if (mouseX>0&&mouseX<640&&mouseY>0&&mouseY<480&&window.sceneNumber==minami_higasi5) {
+    window.sceneNumber=minami_higasi6;
+  }
+  else if (mouseX>90&&mouseX<290&&mouseY>224&&mouseY<254&&window.sceneNumber==minami_higasi6) {
+    window.sceneNumber=minami_sentaku;
+  }
+  else if(mouseX>320&&mouseX<520&&mouseY>224&&mouseY<254&&window.sceneNumber==minami_higasi6){
+  window.sceneNumber=minami_modoru;
+  }
+  else if(mouseX>90&&mouseX<290&&mouseY>224&&mouseY<254&&window.sceneNumber==minami_sentaku){
+  window.sceneNumber=minami2;
+  }
+  else if(mouseX>320&&mouseX<520&&mouseY>224&&mouseY<254&&window.sceneNumber==minami_sentaku){
+  window.sceneNumber=minami_modoru;
+  }
+  else if(mouseX>0&&mouseX<640&&mouseY>0&&mouseY<480&&window.sceneNumber==minami_modoru){
+  window.sceneNumber=minami2;
+  }
+  //北野
+  else if (mouseX>0&&mouseX<640&&mouseY>0&&mouseY<480&&window.sceneNumber==minami_kita1) {
+    window.sceneNumber=minami_kita2;
+  }
+  else if (mouseX>0&&mouseX<640&&mouseY>0&&mouseY<480&&window.sceneNumber==minami_kita2) {
+    window.sceneNumber=minami_kita3;
+  }
+  else if (mouseX>90&&mouseX<290&&mouseY>224&&mouseY<254&&window.sceneNumber==minami_kita3) {
+    window.sceneNumber=minami_sentaku;
+  }
+  else if(mouseX>320&&mouseX<520&&mouseY>224&&mouseY<254&&window.sceneNumber==minami_kita3){
+  window.sceneNumber=minami_modoru;
+  }
+  //南平一
+  else if (mouseX>0&&mouseX<640&&mouseY>0&&mouseY<480&&window.sceneNumber==minami_minami1) {
+    window.sceneNumber=minami_minami2;
+  }
+  else if (mouseX>0&&mouseX<640&&mouseY>0&&mouseY<480&&window.sceneNumber==minami_minami2) {
+    window.sceneNumber=minami_minami3;
+  }
+  else if (mouseX>90&&mouseX<290&&mouseY>224&&mouseY<254&&window.sceneNumber==minami_minami3) {
+    window.sceneNumber=minami_sentaku;
+  }
+  else if(mouseX>320&&mouseX<520&&mouseY>224&&mouseY<254&&window.sceneNumber==minami_minami3){
+  window.sceneNumber=minami_modoru;
+  }
+  //南平台
+  else if (mouseX>0&&mouseX<640&&mouseY>0&&mouseY<480&&window.sceneNumber==minami_minamidai1) {
+    window.sceneNumber=minami_minamidai2;
+  }
+  else if (mouseX>0&&mouseX<640&&mouseY>0&&mouseY<480&&window.sceneNumber==minami_minamidai2) {
+    window.sceneNumber=minami_minamidai3;
+  }
+  else if (mouseX>90&&mouseX<290&&mouseY>224&&mouseY<254&&window.sceneNumber==minami_minamidai3) {
+    window.sceneNumber=minami_sentaku;
+  }
+  else if(mouseX>320&&mouseX<520&&mouseY>224&&mouseY<254&&window.sceneNumber==minami_minamidai3){
+  window.sceneNumber=minami_modoru;
+  }
+  //南平全体ここまで～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～
+  //平山ここから～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～
+  //バス停----------------------------------------------------------------------------------------
+  else if(mouseX>0&&mouseX<640&&mouseY>0&&mouseY<480&&window.sceneNumber==hirayama1){
+  window.sceneNumber=hirayama2;
+  }
+  else if(mouseX>441&&mouseX<591&&mouseY>360&&mouseY<389&&window.sceneNumber==hirayama2){
+  window.sceneNumber=hirayama3;
+  }
+  else if(mouseX>441&&mouseX<591&&mouseY>360&&mouseY<389&&window.sceneNumber==hirayama3){
+  window.sceneNumber=hirayama4;
+  }
+  else if(mouseX>441&&mouseX<591&&mouseY>360&&mouseY<389&&window.sceneNumber==hirayama4){
+  window.sceneNumber=hirayama2;
+  }
+  //未開拓---------------------------------------------------------------------------------------
+  //1page
+  else if(mouseX>27&&mouseX<155&&mouseY>30&&mouseY<137&&window.sceneNumber==hirayama2){
+  window.sceneNumber=hirayama0;
+  }
+  else if(mouseX>163&&mouseX<292&&mouseY>30&&mouseY<137&&window.sceneNumber==hirayama2){
+  window.sceneNumber=hirayama0;
+  }
+  else if(mouseX>307&&mouseX<435&&mouseY>30&&mouseY<137&&window.sceneNumber==hirayama2){
+  window.sceneNumber=hirayama0;
+  }
+  else if(mouseX>456&&mouseX<583&&mouseY>30&&mouseY<137&&window.sceneNumber==hirayama2){
+  window.sceneNumber=hirayama0;
+  }
+  else if(mouseX>27&&mouseX<155&&mouseY>162&&mouseY<270&&window.sceneNumber==hirayama2){
+  window.sceneNumber=hirayama_nai;
+  }
+  else if(mouseX>163&&mouseX<292&&mouseY>162&&mouseY<270&&window.sceneNumber==hirayama2){
+  window.sceneNumber=hirayama0;
+  }
+  else if(mouseX>307&&mouseX<435&&mouseY>162&&mouseY<270&&window.sceneNumber==hirayama2){
+  window.sceneNumber=hirayama0;
+  }
+  else if(mouseX>456&&mouseX<583&&mouseY>162&&mouseY<270&&window.sceneNumber==hirayama2){
+  window.sceneNumber=hirayama0;
+  }
+  //2page
+  else if(mouseX>27&&mouseX<155&&mouseY>30&&mouseY<137&&window.sceneNumber==hirayama3){
+  window.sceneNumber=hirayama0;
+  }
+  else if(mouseX>163&&mouseX<292&&mouseY>30&&mouseY<137&&window.sceneNumber==hirayama3){
+  window.sceneNumber=hirayama0;
+  }
+  else if(mouseX>307&&mouseX<435&&mouseY>30&&mouseY<137&&window.sceneNumber==hirayama3){
+  window.sceneNumber=hirayama0;
+  }
+  else if(mouseX>456&&mouseX<583&&mouseY>30&&mouseY<137&&window.sceneNumber==hirayama3){
+  window.sceneNumber=hirayama0;
+  }
+  else if(mouseX>27&&mouseX<155&&mouseY>162&&mouseY<270&&window.sceneNumber==hirayama3){
+  window.sceneNumber=hirayama0;
+  }
+  else if(mouseX>163&&mouseX<292&&mouseY>162&&mouseY<270&&window.sceneNumber==hirayama3){
+  window.sceneNumber=hirayama0;
+  }
+  else if(mouseX>307&&mouseX<435&&mouseY>162&&mouseY<270&&window.sceneNumber==hirayama3){
+  window.sceneNumber=hirayama_hirayama1;
+  }
+  else if(mouseX>456&&mouseX<583&&mouseY>162&&mouseY<270&&window.sceneNumber==hirayama3){
+  window.sceneNumber=hirayama0;
+  }
+  //3page
+  else if(mouseX>27&&mouseX<155&&mouseY>30&&mouseY<137&&window.sceneNumber==hirayama4){
+  window.sceneNumber=hirayama_tyoume1;
+  }
+  else if(mouseX>163&&mouseX<292&&mouseY>30&&mouseY<137&&window.sceneNumber==hirayama4){
+  window.sceneNumber=hirayama0;
+  }
+  else if(mouseX>307&&mouseX<435&&mouseY>30&&mouseY<137&&window.sceneNumber==hirayama4){
+  window.sceneNumber=hirayama0;
+  }
+  else if(mouseX>456&&mouseX<583&&mouseY>30&&mouseY<137&&window.sceneNumber==hirayama4){
+  window.sceneNumber=hirayama0;
+  }
+  else if(mouseX>27&&mouseX<155&&mouseY>162&&mouseY<270&&window.sceneNumber==hirayama4){
+  window.sceneNumber=hirayama0;
+  }
+  else if(mouseX>163&&mouseX<292&&mouseY>162&&mouseY<270&&window.sceneNumber==hirayama4){
+  window.sceneNumber=hirayama0;
+  }
+  else if(mouseX>307&&mouseX<435&&mouseY>162&&mouseY<270&&window.sceneNumber==hirayama4){
+  window.sceneNumber=hirayama0;
+  }
+  else if(mouseX>456&&mouseX<583&&mouseY>162&&mouseY<270&&window.sceneNumber==hirayama4){
+  window.sceneNumber=hirayama0;
+  }
+  //未開拓ページ
+  else if(mouseX>90&&mouseX<290&&mouseY>224&&mouseY<254&&window.sceneNumber==hirayama0){
+  window.sceneNumber=hirayama2;
+  }
+  else if(mouseX>320&&mouseX<520&&mouseY>224&&mouseY<254&&window.sceneNumber==hirayama0){
+  window.sceneNumber=hirayama2;
+  }
+  //情報アリ---------------------------------------------------------------------------------
+  //一丁目
+  else if (mouseX>0&&mouseX<640&&mouseY>0&&mouseY<480&&window.sceneNumber==hirayama_tyoume1) {
+    window.sceneNumber=hirayama_tyoume2;
+  }
+  else if (mouseX>0&&mouseX<640&&mouseY>0&&mouseY<480&&window.sceneNumber==hirayama_tyoume2) {
+    window.sceneNumber=hirayama_tyoume3;
+  }
+  else if (mouseX>90&&mouseX<290&&mouseY>224&&mouseY<254&&window.sceneNumber==hirayama_tyoume3) {
+    window.sceneNumber=hirayama_tyoume4;
+  }
+  else if(mouseX>320&&mouseX<520&&mouseY>224&&mouseY<254&&window.sceneNumber==hirayama_tyoume3){
+  window.sceneNumber=hirayama_modoru;
+  }
+  else if (mouseX>0&&mouseX<640&&mouseY>0&&mouseY<480&&window.sceneNumber==hirayama_tyoume4) {
+    window.sceneNumber=hirayama_tyoume5;
+  }
+  else if (mouseX>0&&mouseX<640&&mouseY>0&&mouseY<480&&window.sceneNumber==hirayama_tyoume5) {
+    window.sceneNumber=hirayama_tyoume6;
+  }
+  else if (mouseX>90&&mouseX<290&&mouseY>224&&mouseY<254&&window.sceneNumber==hirayama_tyoume6) {
+    window.sceneNumber=hirayama_tyoume7;
+  }
+  else if(mouseX>320&&mouseX<520&&mouseY>224&&mouseY<254&&window.sceneNumber==hirayama_tyoume6){
+  window.sceneNumber=hirayama_modoru;
+  }
+  else if (mouseX>0&&mouseX<640&&mouseY>0&&mouseY<480&&window.sceneNumber==hirayama_tyoume7) {
+    window.sceneNumber=hirayama_tyoume8;
+  }
+  else if (mouseX>0&&mouseX<640&&mouseY>0&&mouseY<480&&window.sceneNumber==hirayama_tyoume8) {
+    window.sceneNumber=hirayama_tyoume9;
+  }
+  else if (mouseX>90&&mouseX<290&&mouseY>224&&mouseY<254&&window.sceneNumber==hirayama_tyoume6) {
+    window.sceneNumber=hirayama_tyoume7;
+  }
+  else if (mouseX>0&&mouseX<640&&mouseY>0&&mouseY<480&&window.sceneNumber==hirayama_tyoume9) {
+    window.sceneNumber=hirayama_sentaku;
+  }
+  else if (mouseX>90&&mouseX<290&&mouseY>224&&mouseY<254&&window.sceneNumber==hirayama_sentaku) {
+    window.sceneNumber=hirayama2;
+  }
+  else if(mouseX>320&&mouseX<520&&mouseY>224&&mouseY<254&&window.sceneNumber==hirayama_sentaku){
+  window.sceneNumber=hirayama_modoru;
+  }
+  else if(mouseX>0&&mouseX<640&&mouseY>0&&mouseY<480&&window.sceneNumber==hirayama_modoru){
+  window.sceneNumber=hirayama2;
+  }
+  //平山センター
+  else if (mouseX>0&&mouseX<640&&mouseY>0&&mouseY<480&&window.sceneNumber==hirayama_hirayama1) {
+    window.sceneNumber=hirayama_hirayama2;
+  }
+  else if (mouseX>0&&mouseX<640&&mouseY>0&&mouseY<480&&window.sceneNumber==hirayama_hirayama2) {
+    window.sceneNumber=hirayama_hirayama3;
+  }
+  else if (mouseX>90&&mouseX<290&&mouseY>224&&mouseY<254&&window.sceneNumber==hirayama_hirayama3) {
+    window.sceneNumber=hirayama_sentaku;
+  }
+  else if(mouseX>320&&mouseX<520&&mouseY>224&&mouseY<254&&window.sceneNumber==hirayama_hirayama3){
+  window.sceneNumber=hirayama_modoru;
+  }
+  //平山ここまで～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～
+  //川辺ここから～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～～
+  //バス停----------------------------------------------------------------------------------
+  else if(mouseX>0&&mouseX<640&&mouseY>0&&mouseY<480&&window.sceneNumber==kawabe1){
+  window.sceneNumber=kawabe2;
+  }
+  else if(mouseX>441&&mouseX<591&&mouseY>360&&mouseY<389&&window.sceneNumber==kawabe2){
+  window.sceneNumber=kawabe3;
+  }
+  else if(mouseX>441&&mouseX<591&&mouseY>360&&mouseY<389&&window.sceneNumber==kawabe3){
+  window.sceneNumber=kawabe2;
+  }
+  //未開拓---------------------------------------------------------------------------------------
+  //1page
+  else if(mouseX>27&&mouseX<155&&mouseY>30&&mouseY<137&&window.sceneNumber==kawabe2){
+  window.sceneNumber=kawabe_nai;
+  }
+  else if(mouseX>163&&mouseX<292&&mouseY>30&&mouseY<137&&window.sceneNumber==kawabe2){
+  window.sceneNumber=kawabe_nai;
+  }
+  else if(mouseX>307&&mouseX<435&&mouseY>30&&mouseY<137&&window.sceneNumber==kawabe2){
+  window.sceneNumber=kawabe_nai;
+  }
+  else if(mouseX>456&&mouseX<583&&mouseY>30&&mouseY<137&&window.sceneNumber==kawabe2){
+  window.sceneNumber=kawabe_nai;
+  }
+  else if(mouseX>27&&mouseX<155&&mouseY>162&&mouseY<270&&window.sceneNumber==kawabe2){
+  window.sceneNumber=kawabe_itiban1;
+  }
+  else if(mouseX>163&&mouseX<292&&mouseY>162&&mouseY<270&&window.sceneNumber==kawabe2){
+  window.sceneNumber=kawabe_nai;
+  }
+  else if(mouseX>307&&mouseX<435&&mouseY>162&&mouseY<270&&window.sceneNumber==kawabe2){
+  window.sceneNumber=kawabe_nai;
+  }
+  else if(mouseX>456&&mouseX<583&&mouseY>162&&mouseY<270&&window.sceneNumber==kawabe2){
+  window.sceneNumber=kawabe_hori1;
+  }
+  //2page
+  else if(mouseX>27&&mouseX<155&&mouseY>30&&mouseY<137&&window.sceneNumber==kawabe3){
+  window.sceneNumber=kawabe_hino1;
+  }
+  else if(mouseX>163&&mouseX<292&&mouseY>30&&mouseY<137&&window.sceneNumber==kawabe3){
+  window.sceneNumber=kawabe_nai;
+  }
+  else if(mouseX>307&&mouseX<435&&mouseY>30&&mouseY<137&&window.sceneNumber==kawabe3){
+  window.sceneNumber=kawabe_nai;
+  }
+  else if(mouseX>456&&mouseX<583&&mouseY>30&&mouseY<137&&window.sceneNumber==kawabe3){
+  window.sceneNumber=kawabe_nai;
+  }
+  else if(mouseX>27&&mouseX<155&&mouseY>162&&mouseY<270&&window.sceneNumber==kawabe3){
+  window.sceneNumber=kawabe_nai;
+  }
+  else if(mouseX>163&&mouseX<292&&mouseY>162&&mouseY<270&&window.sceneNumber==kawabe3){
+  window.sceneNumber=kawabe_nai;
+  }
+  //未開拓ページ
+  else if(mouseX>90&&mouseX<290&&mouseY>224&&mouseY<254&&window.sceneNumber==kawabe_nai){
+  window.sceneNumber=kawabe2;
+  }
+  else if(mouseX>320&&mouseX<520&&mouseY>224&&mouseY<254&&window.sceneNumber==kawabe_nai){
+  window.sceneNumber=kawabe2;
+  }
+  //一番橋
+  else if (mouseX>0&&mouseX<640&&mouseY>0&&mouseY<480&&window.sceneNumber==kawabe_itiban1) {
+    window.sceneNumber=kawabe_itiban2;
+  }
+  else if (mouseX>0&&mouseX<640&&mouseY>0&&mouseY<480&&window.sceneNumber==kawabe_itiban2) {
+    window.sceneNumber=kawabe_itiban3;
+  }
+  else if (mouseX>90&&mouseX<290&&mouseY>224&&mouseY<254&&window.sceneNumber==kawabe_itiban3) {
+    window.sceneNumber=kawabe_itiban4;
+  }
+  else if(mouseX>320&&mouseX<520&&mouseY>224&&mouseY<254&&window.sceneNumber==kawabe_itiban3){
+  window.sceneNumber=kawabe_modoru;
+  }
+  else if (mouseX>0&&mouseX<640&&mouseY>0&&mouseY<480&&window.sceneNumber==kawabe_itiban4) {
+    window.sceneNumber=kawabe_itiban5;
+  }
+  else if (mouseX>0&&mouseX<640&&mouseY>0&&mouseY<480&&window.sceneNumber==kawabe_itiban5) {
+    window.sceneNumber=kawabe_itiban6;
+  }
+  else if (mouseX>90&&mouseX<290&&mouseY>224&&mouseY<254&&window.sceneNumber==kawabe_itiban6) {
+    window.sceneNumber=kawabe_sentaku;
+  }
+  else if(mouseX>320&&mouseX<520&&mouseY>224&&mouseY<254&&window.sceneNumber==kawabe_itiban6){
+  window.sceneNumber=kawabe_modoru;
+  }
+  else if (mouseX>90&&mouseX<290&&mouseY>224&&mouseY<254&&window.sceneNumber==kawabe_sentaku) {
+    window.sceneNumber=kawabe2;
+  }
+  else if(mouseX>320&&mouseX<520&&mouseY>224&&mouseY<254&&window.sceneNumber==kawabe_sentaku){
+  window.sceneNumber=kawabe_modoru;
+  }
+  else if(mouseX>0&&mouseX<640&&mouseY>0&&mouseY<480&&window.sceneNumber==kawabe_modoru){
+  window.sceneNumber=kawabe2;
+  }
+  //堀之内
+  else if (mouseX>0&&mouseX<640&&mouseY>0&&mouseY<480&&window.sceneNumber==kawabe_hori1) {
+    window.sceneNumber=kawabe_hori2;
+  }
+  else if (mouseX>0&&mouseX<640&&mouseY>0&&mouseY<480&&window.sceneNumber==kawabe_hori2) {
+    window.sceneNumber=kawabe_hori3;
+  }
+  else if (mouseX>90&&mouseX<290&&mouseY>224&&mouseY<254&&window.sceneNumber==kawabe_hori3) {
+    window.sceneNumber=kawabe_sentaku;
+  }
+  else if(mouseX>320&&mouseX<520&&mouseY>224&&mouseY<254&&window.sceneNumber==kawabe_hori3){
+  window.sceneNumber=kawabe_modoru;
+  }
+  //日野
+  else if (mouseX>0&&mouseX<640&&mouseY>0&&mouseY<480&&window.sceneNumber==kawabe_hino1) {
+    window.sceneNumber=kawabe_hino2;
+  }
+  else if (mouseX>0&&mouseX<640&&mouseY>0&&mouseY<480&&window.sceneNumber==kawabe_hino2) {
+    window.sceneNumber=kawabe_hino3;
+  }
+  else if (mouseX>90&&mouseX<290&&mouseY>224&&mouseY<254&&window.sceneNumber==kawabe_hino3) {
+    window.sceneNumber=kawabe_sentaku;
+  }
+  else if(mouseX>320&&mouseX<520&&mouseY>224&&mouseY<254&&window.sceneNumber==kawabe_hino3){
+  window.sceneNumber=kawabe_modoru;
   }
 }
