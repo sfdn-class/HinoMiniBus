@@ -13,27 +13,45 @@
     <!-- 自分のP5.jsコードを読み込む -->
     <script type="text/javascript" src="./adventure_groupa.js">
     </script>
+    <link rel="stylesheet" type="text/css" href="./game.css">
   </head>
   <body>
     <div id="header">
-      <p>ここはヘッダです</p>
+      <h1>みにばす旅</h1>
+      <div id="menu">
+        <ul class = "tabs-nav">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../buspage/bus_sinai.html" target="_self">市内</a></li>
+          <li><a href="../buspage/bus_minami.html" target="_self">南平</a></li>
+          <li><a href="../buspage/bus_misawadai.html" target="_self">三沢台</a></li>
+          <li><a href="../buspage/bus_asahi.html" target="_self">旭が丘</a></li>
+          <li><a href="../buspage/bus_otikawa.html" target="_self">落川</a></li>
+          <li><a href="../buspage/bus_hirayama.html" target="_self">平山</a></li>
+          <li><a href="../buspage/bus_kawabe.html" target="_self">川辺堀之内</a></li>
+          <li><a href="./sample.html" target="_self">ミニゲーム</a></li>
+          <li><a href="../buspage/sankou.html" target="_self">参考文献</a></li>
+        </ul>
+      </div><!--end of menu-->
     </div>
 
     <!-- DivタグでCanvasの親となる要素を指定 -->
+    <div class = "blue">
+    <div class ="blueContant">
     <center>
+
     <div id="P5Canvas">
-      <p>
-	ここがキャンバスになるdivです．
-      </p>
+
     </div>
+
   </center>
 
 
     <div id="footer">
       <p>
-	ここがフッタです．
+	       Copyright © 2018 GroupA All Rights Reserved.
       </p>
     </div>
-
+  </div><!--end of blueContant-->
+  </div><!--end of theam & blue-->
   </body>
 </html>

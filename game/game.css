@@ -1,0 +1,159 @@
+html, body {
+  font-family: "游明朝体","YuMincho",serif;
+  text-align: center;
+    height: 100%;
+    width:100%;
+    margin: 0;
+    padding: 0;
+}
+
+h1{
+  font-weight: normal;
+}
+
+p{
+  line-height: 3;
+}
+#header {
+  left:10%;
+  width:90%;
+  margin: auto;
+  display:flex;
+}
+
+#menu ul {
+  position: relative;
+  display: flex;
+  top:35%;
+    list-style-type: none;
+    margin:0;
+    padding: 0,5;
+    overflow: hidden;
+}
+
+
+
+#menu li a {
+
+   font-family: "HiraginoSans-W1","ヒラギノ角ゴシック W0";
+   display: block;
+   color: black;
+   text-align: center;
+
+   padding: 0 16px;
+   text-decoration: none;
+}
+
+#menu li a:hover {
+    border-bottom: solid 2px rgb(150,150,150);
+}
+
+
+
+#map{
+  width:100%;
+  min-height: 250px;
+  height: 500px;
+
+}
+
+#theam ul {
+  display: flex;
+  list-style: none;
+  flex-wrap: wrap; /* 折り返し */
+  margin:0;
+  padding:0;
+  list-style: none;
+  top: 0;
+  text-align: center;
+}
+
+#theam ul li{
+  width:22%;
+  margin:1.5%;
+}
+#theam ul li dl {
+  left:5%;
+  top: 5%;
+  width:90%;
+  height: 90%;
+  margin:0;
+}
+#theam img{
+  position:relative;
+  width:100%;
+  margin: 0;
+}
+#theam ul {
+letter-spacing: -1em;
+overflow: hidden;
+display: inline-block;
+}
+#theam ul li {
+display: inline-block;
+position: relative;
+overflow: hidden;
+margin: 0 5px;
+letter-spacing: 0;
+}
+#theam ul dl {
+position: absolute;
+top: 0;
+margin: 0;
+padding: 20px 25px;
+box-sizing: border-box;
+color: #fff;
+background: url("./img/theamover-8.png");
+background-repeat: no-repeat;
+background-size: 100% 100%;
+}
+#theam ul dl dt {
+  font-size: 20pt;
+  text-align: center;
+  padding: 25% 0;
+  /*margin-bottom: 0.3em;*/
+}
+#theam ul dl dd {
+  text-decoration: none;
+  margin: 0;
+  line-height: 1.6;
+  text-align: justify;
+  word-break: break-all;
+  position: absolute;
+  right:10%;
+  bottom:5%;
+
+}
+
+#theam ul dl dd a{
+  text-decoration: none;
+  font-size: 10pt;
+  color:#ffffff;
+
+}
+
+#theam ul dl dd:last-of-type {
+  margin-top: 10px;
+  text-align: right;
+}
+/* type1 */
+
+
+.blue{
+  /*background: url("../img/backdesign.png");
+  background-repeat: no-repeat;
+    background-size: 100% 100%;*/
+}
+
+ .blueContant {
+   position: relative;
+   padding-top: 5%;
+   padding-bottom: 5%;
+   margin: 0;
+   background-color: #cadae1;
+ }
+
+#footer{
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
