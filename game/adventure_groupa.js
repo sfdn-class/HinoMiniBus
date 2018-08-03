@@ -144,6 +144,11 @@ var kawabe_itiban3;
 var kawabe_itiban4;
 var kawabe_itiban5;
 var kawabe_itiban6;
+//投稿
+var post1;
+var post2;
+var post3;
+var post4;
 
 
 function setup(){
@@ -296,6 +301,11 @@ function setup(){
     kawabe_itiban4=loadImage("game/kawabe/itibannhashi2_1.png");
     kawabe_itiban5=loadImage("game/kawabe/itibannhashi2_2.png");
     kawabe_itiban6=loadImage("game/kawabe/itibannhashi2_3.png");
+    //投稿
+    post1=loadImage("game/kyotsu/post1.png");
+    post2=loadImage("game/kyotsu/post2.png");
+    post3=loadImage("game/kyotsu/post3.png");
+    post4=loadImage("game/kyotsu/post4.png");
 
 }
 
@@ -837,6 +847,18 @@ function draw(){
   else if(window.sceneNumber == kawabe_itiban6){
     //川辺堀之内路線
     drawSceneNumberkawabe_itiban6();
+  }
+  else if(window.sceneNumber == post1){
+    drawSceneNumberpost1();
+  }
+  else if(window.sceneNumber == post2){
+    drawSceneNumberpost2();
+  }
+  else if(window.sceneNumber == post3){
+    drawSceneNumberpost3();
+  }
+  else if(window.sceneNumber == post4){
+    drawSceneNumberpost4();
   }
 }
 
@@ -1792,6 +1814,34 @@ function drawSceneNumberkawabe_hino3(){
   image(kawabe_hino3,0,0);
 }
 
+function drawSceneNumberpost1(){
+  noStroke();
+  fill(255, 255, 255, 0);
+  rect(0, 0, width, height);
+  image(post1,0,0);
+}
+
+function drawSceneNumberpost2(){
+  noStroke();
+  fill(255, 255, 255, 0);
+  rect(0, 0, width, height);
+  image(post2,0,0);
+}
+
+function drawSceneNumberpost3(){
+  noStroke();
+  fill(255, 255, 255, 0);
+  rect(0, 0, width, height);
+  image(post3,0,0);
+}
+
+function drawSceneNumberpost4(){
+  noStroke();
+  fill(255, 255, 255, 0);
+  rect(0, 0, width, height);
+  image(post4,0,0);
+}
+
 
 function mousePressed() { // マウスをクリックしたら(右クリック含む)
   if(mouseX>211&&mouseX<413&&mouseY>263&&mouseY<364&&window.sceneNumber==0){
@@ -1944,7 +1994,28 @@ function mousePressed() { // マウスをクリックしたら(右クリック�
   }
   //未開拓ページ
   else if(mouseX>90&&mouseX<290&&mouseY>224&&mouseY<254&&window.sceneNumber==sinai_nai){
-  window.sceneNumber=sinai2;
+  window.sceneNumber=post1;
+  }
+  else if(mouseX>90&&mouseX<290&&mouseY>224&&mouseY<254&&window.sceneNumber==post1){
+  window.sceneNumber=post2;
+  }
+  else if(mouseX>320&&mouseX<520&&mouseY>224&&mouseY<254&&window.sceneNumber==post1){
+  window.sceneNumber=sinai_modoru;
+  }
+  else if(mouseX>90&&mouseX<290&&mouseY>224&&mouseY<254&&window.sceneNumber==post2){
+  window.sceneNumber=post3;
+  }
+  else if(mouseX>320&&mouseX<520&&mouseY>224&&mouseY<254&&window.sceneNumber==post2){
+  window.sceneNumber=post1;
+  }
+  else if(mouseX>90&&mouseX<290&&mouseY>224&&mouseY<254&&window.sceneNumber==post3){
+  window.sceneNumber=post4;
+  }
+  else if(mouseX>320&&mouseX<520&&mouseY>224&&mouseY<254&&window.sceneNumber==post3){
+  window.sceneNumber=post1;
+  }
+  else if(mouseX>0&&mouseX<640&&mouseY>0&&mouseY<480&&window.sceneNumber==post4){
+    window.sceneNumber=sinai_modoru;
   }
   else if(mouseX>320&&mouseX<520&&mouseY>224&&mouseY<254&&window.sceneNumber==sinai_nai){
   window.sceneNumber=sinai2;
@@ -1958,7 +2029,7 @@ function mousePressed() { // マウスをクリックしたら(右クリック�
   window.sceneNumber=sinai_sentaku;
   }
   else if(mouseX>90&&mouseX<290&&mouseY>224&&mouseY<254&&window.sceneNumber==sinai_sentaku){
-  window.sceneNumber=sinai2;
+  window.sceneNumber=post1;
   }
   else if(mouseX>320&&mouseX<520&&mouseY>224&&mouseY<254&&window.sceneNumber==sinai_sentaku){
   window.sceneNumber=sinai_modoru;
